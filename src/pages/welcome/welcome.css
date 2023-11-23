@@ -1,0 +1,54 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bg-hero {
+  display: flex;
+  vertical-align: middle;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-position: center;
+  background-color: #000;
+  /* Remove the negative z-index */
+  position: relative; /* Add this line */
+}
+
+.bg-hero img {
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  opacity: .5;
+}
+
+.bg-hero .inner {
+  text-align: center;
+  margin: 0 auto;
+  z-index: 2;
+  margin-bottom: 200px;
+}
+
+.inner .button {
+  margin-top: 12px;
+}
+
+.inner a {
+  color: #fff;
+}
+
+.bg-hero .inner h1 {
+  font-size: 48px;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.nav {
+  z-index: 2; /* Adjusted z-index */
+  position: relative; /* Add this line */
+}
