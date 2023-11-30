@@ -1,0 +1,44 @@
+.list {
+    margin-top: 5vh;
+    margin-bottom: 10vh;
+    padding: 20px;
+    margin-left: 20px; /* Sesuaikan nilai negatifnya */
+    margin-right: -1px;
+}
+/* Atur padding pada card atau item grid */
+.list .MuiGrid-item {
+    padding:  10px; /* Sesuaikan nilai padding */
+}
+
+.home-page-container {
+    display: flex;
+}
+
+.filter-sidebar {
+    width: 35%;
+    background-color: #303c45;
+    padding: 20px;
+    margin-top: 55px;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h2 {
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 5px;
+}
+
+/*.content {*/
+/*    flex: 1;*/
+/*    padding: 20px;*/
+/*}*/

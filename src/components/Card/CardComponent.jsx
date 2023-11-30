@@ -1,4 +1,5 @@
 /* eslint-disable react/prop-types */
+// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 // import { styled } from '@mui/material/styles';
 import Card from '@mui/material/Card';
@@ -8,16 +9,16 @@ import CardContent from '@mui/material/CardContent';
 // import CardActions from '@mui/material/CardActions';
 // import Collapse from '@mui/material/Collapse';
 import Avatar from '@mui/material/Avatar';
-import IconButton from '@mui/material/IconButton';
+// import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 import { red } from '@mui/material/colors';
 // import FavoriteIcon from '@mui/icons-material/Favorite';
 // import ShareIcon from '@mui/icons-material/Share';
 // import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
-import MoreVertIcon from '@mui/icons-material/MoreVert';
+// import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ButtonComponent from "../Button/ButtonComponent.jsx";
 import RatingComponent from "../Rating/RatingComponent.jsx";
-import Container from "@mui/material/Container";
+// import Container from "@mui/material/Container";
 
 // const ExpandMore = styled((props) => {
 //     const { expand, ...other } = props;

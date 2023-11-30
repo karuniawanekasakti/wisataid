@@ -14,7 +14,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import navLinks from "../../utils/NavLinks";
 // import { Link } from "react-router-dom";
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
 
 
 
@@ -27,11 +27,12 @@ const Header = () => {
   };
 
   const handleCloseNavMenu = () => {
-    {navLinks.map ((link) => (
-      <Link href={link.path} key={link.name}></Link>
-    ))}
+    // {navLinks.map ((link) => (
+    //   <Link href={link.path} key={link.name}></Link>
+    // ))}
+    setAnchorElNav(null);
   };
-  
+
   const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -46,7 +47,7 @@ const Header = () => {
       width: 'auto',
     },
   }));
-  
+
   const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -56,7 +57,7 @@ const Header = () => {
     alignItems: 'center',
     justifyContent: 'center',
   }));
-  
+
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
@@ -142,7 +143,7 @@ const Header = () => {
             </Box>
             <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
               href="#app-bar-with-responsive-menu"
@@ -157,7 +158,7 @@ const Header = () => {
                 textDecoration: 'none',
               }}
             >
-                WISATA ID
+                Wisata ID
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navLinks.map((link) => (
@@ -171,7 +172,7 @@ const Header = () => {
                 </Button>
               ))}
             </Box>
-            
+
             <Box>
             <Search>
               <SearchIconWrapper>
