@@ -36,6 +36,7 @@ const [mode, setMode] = React.useState('dark');
         <Routes>
           <Route path="/" Component={Welcome} />
           <Route path="/list-wisata" Component={ListWisata} />
+          <Route path="/home" Component={HomePage} />
         </Routes>
         </ThemeProvider>
     </>
