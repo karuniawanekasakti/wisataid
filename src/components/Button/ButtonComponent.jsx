@@ -6,7 +6,9 @@ export default function ButtonComponent(props) {
   
   return (
       <Button variant="contained" endIcon={props.endIcon} size={props.size}>
-        {props.text}
+        <b>
+          {props.text}
+        </b>
       </Button>
   );
 }

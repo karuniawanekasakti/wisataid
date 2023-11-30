@@ -1,9 +1,8 @@
-import Header from '../../components/Header/Header';
-import Select from '../../components/Select/Select';
+import SelectComponent from '../../components/Select/SelectComponent';
 import ButtonComponent from '../../components/Button/ButtonComponent';
 import Stack from '@mui/material/Stack';
 
-import SearchIcon from '@mui/icons-material/Search';
+import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 
 
 import HeroImage from '../../assets/img/background 1.png'
@@ -13,18 +12,15 @@ const Welcome = () => {
   return (
     <>
       <div className='header'>
-        <div className='nav'>
-          <Header/>
-        </div>
         <div className='bg-hero'>
           <img src={HeroImage}/>
           <div className='inner'>
             <Stack spacing={1} direction={'column'}>
 
               <h1>Mau kemana hari ini?</h1>
-              <Select/>
+              <SelectComponent/>
               <div className='button'>
-                <ButtonComponent text='Cari' endIcon={<SearchIcon/>} size='large'/>
+                <ButtonComponent text='Cari' endIcon={<KeyboardArrowRightRoundedIcon fontSize='small'/>} size='large'/>
               </div>
               <a href="#">Skip</a>
             </Stack>

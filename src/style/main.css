@@ -1,3 +1,8 @@
-/* * {
+* {
   font-family: poppins, sans-serif;
-} */
+}
+
+.nav {
+  z-index: 2; /* Adjusted z-index */
+  position: relative; /* Add this line */
+}
