@@ -8,13 +8,16 @@ import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
-import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
-import { styled, alpha, createTheme, ThemeProvider } from '@mui/material/styles';
+import { styled, alpha } from '@mui/material/styles';
 import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
+import navLinks from "../../utils/NavLinks";
+// import { Link } from "react-router-dom";
+import Link from '@mui/material/Link';
 
-const pages = ['Homepage', 'Maps', 'About Us', 'Contribution'];
+
+
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -24,7 +27,9 @@ const Header = () => {
   };
 
   const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
+    {navLinks.map ((link) => (
+      <Link href={link.path} key={link.name}></Link>
+    ))}
   };
   
   const Search = styled('div')(({ theme }) => ({
@@ -69,20 +74,19 @@ const Header = () => {
     },
   }));
 
-  const theme = createTheme({
-    palette: {
-      primary: {
-        main: '#000000',
-      },
-      secondary: {
-        main: '#fff',
-      },
-    },
-  });
+  // const theme = createTheme({
+  //   palette: {
+  //     primary: {
+  //       main: '#000000',
+  //     },
+  //     secondary: {
+  //       main: '#fff',
+  //     },
+  //   },
+  // });
 
 
   return (
-    <ThemeProvider theme={theme}>
       <AppBar position="static" color="primary">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
@@ -134,11 +138,6 @@ const Header = () => {
                   display: { xs: 'block', md: 'none' },
                 }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
-                  </MenuItem>
-                ))}
               </Menu>
             </Box>
             <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
@@ -161,13 +160,14 @@ const Header = () => {
               LOGO
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-              {pages.map((page) => (
+              {navLinks.map((link) => (
                 <Button
-                  key={page}
+                  key={link.name}
+                  href={link.path}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: 'white', display: 'block' }}
                 >
-                  {page}
+                  {link.name}
                 </Button>
               ))}
             </Box>
@@ -186,7 +186,6 @@ const Header = () => {
           </Toolbar>
         </Container>
       </AppBar>
-    </ThemeProvider>
   );
 }
 

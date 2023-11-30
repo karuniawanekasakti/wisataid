@@ -2,7 +2,8 @@ import * as React from 'react';
 import { styled } from '@mui/material/styles';
 import InputLabel from '@mui/material/InputLabel';
 import FormControl from '@mui/material/FormControl';
-import NativeSelect from '@mui/material/NativeSelect';
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
 import InputBase from '@mui/material/InputBase';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
@@ -16,7 +17,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     fontSize: 20,
     padding: '10px 26px 10px 12px',
     transition: theme.transitions.create(['border-color', 'box-shadow']),
-    fontFamily: 'poppins',
+    fontFamily: 'Roboto',
     '&:focus': {
       borderRadius: 4,
       borderColor: '#80bdff',
@@ -24,7 +25,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
-export default function Select() {
+export default function SelectComponent() {
   const [city, setcity] = React.useState('');
   const handleChange = (event) => {
     setcity(event.target.value);
@@ -33,17 +34,17 @@ export default function Select() {
     <div>
       <FormControl sx={{ width: '500px' }} variant="standard" size='medium'>
         <InputLabel htmlFor="demo-customized-select-native">City</InputLabel>
-        <NativeSelect
+        <Select
           id="demo-customized-select-native"
           value={city}
           onChange={handleChange}
           input={<BootstrapInput />}
         >
-          <option aria-label="None" value="">Pilih Daerah tujuanmu</option>
-          <option value={10}>Yogyakarta</option>
-          <option value={20}>Malang</option>
-          <option value={30}>Surabaya</option>
-        </NativeSelect>
+            <MenuItem value="">Pilih Daerah tujuanmu</MenuItem>
+            <MenuItem value={10}>Yogyakarta</MenuItem>
+            <MenuItem value={20}>Malang</MenuItem>
+            <MenuItem value={30}>Surabaya</MenuItem>
+        </Select>
       </FormControl>
     </div>
   );
