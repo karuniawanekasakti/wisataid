@@ -63,7 +63,12 @@ export default function CardComponent(props) {
                 <Typography gutterBottom variant="h5" component="div">
                     {props.title}
                 </Typography>
-                <Typography variant="body2" color="text.secondary" >
+                <Typography variant="body1" color="text.secondary" sx={{
+                    display: '-webkit-box',
+                    overflow: 'hidden',
+                    WebkitBoxOrient: 'vertical',
+                    WebkitLineClamp: 3,
+                }} >
                     {props.description}
                 </Typography>
                 <div style={{marginTop:'20px', display: "flex", justifyContent: "end"}}>

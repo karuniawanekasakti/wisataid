@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -16,11 +17,17 @@ import navLinks from "../../utils/NavLinks";
 // import { Link } from "react-router-dom";
 import Link from '@mui/material/Link';
 
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
+import { useTheme } from '@mui/material/styles';
 
 
 
-const Header = () => {
+const Header = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const theme = useTheme();
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -73,6 +80,7 @@ const Header = () => {
       },
     },
   }));
+
 
   // const theme = createTheme({
   //   palette: {
@@ -171,7 +179,9 @@ const Header = () => {
                 </Button>
               ))}
             </Box>
-            
+              <IconButton sx={{ ml: 1 }} onClick={props.toogleColorMode} color="inherit">
+                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+              </IconButton>
             <Box>
             <Search>
               <SearchIconWrapper>

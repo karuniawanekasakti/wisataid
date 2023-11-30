@@ -4,26 +4,39 @@ import ListWisata from './pages/listWIsata/ListWisata'
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../src/components/Header/Header';
+import React from 'react';
 
-const darkTheme = createTheme({
-  palette: {
-    mode: 'light',
-  },
-});
 
 function App() {
+const [mode, setMode] = React.useState('dark');
+
+  const toogleColorMode = () => {
+    setMode(mode === 'dark' ? 'light' : 'dark');
+    console.log(mode)
+  }
+  
+  const theme = React.useMemo(
+    () =>
+      createTheme({
+        palette: {
+          mode,
+        },
+      }),
+    [mode],
+  );
+  
   return (
     <>
-    <ThemeProvider theme={darkTheme}>
-      <CssBaseline />
-      <div className='nav'>
-          <Header/>
-        </div>
-      <Routes>
-        <Route path="/" Component={Welcome} />
-        <Route path="/list-wisata" Component={ListWisata} />
-      </Routes>
-      </ThemeProvider>
+      <ThemeProvider theme={theme}>
+        <CssBaseline />
+        <div className='nav'>
+            <Header toogleColorMode={toogleColorMode}/>
+          </div>
+        <Routes>
+          <Route path="/" Component={Welcome} />
+          <Route path="/list-wisata" Component={ListWisata} />
+        </Routes>
+        </ThemeProvider>
     </>
   )
 }
