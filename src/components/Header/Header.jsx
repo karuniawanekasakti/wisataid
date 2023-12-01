@@ -96,7 +96,7 @@ const Header = (props) => {
 
 
   return (
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="primary" className='appBar'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />

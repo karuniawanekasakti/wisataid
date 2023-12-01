@@ -1,66 +1,27 @@
-// // eslint-disable-next-line no-unused-vars
-// import * as React from 'react';
-// import PropTypes from 'prop-types';
-// import { useAutocomplete } from '@mui/base/useAutocomplete';
-// import CheckIcon from '@mui/icons-material/Check';
-// import CloseIcon from '@mui/icons-material/Close';
-// import { styled } from '@mui/material/styles';
-// import { autocompleteClasses } from '@mui/material/Autocomplete';
-//
-// // Komponen dan gaya-gaya sebelumnya tetap sama
-//
-// export default function SelectTags(props) {
-//     const { options } = props;
-//
-//     const {
-//         getRootProps,
-//         getInputLabelProps,
-//         getInputProps,
-//         getTagProps,
-//         getListboxProps,
-//         getOptionProps,
-//         groupedOptions,
-//         value,
-//         focused,
-//         setAnchorEl,
-//     } = useAutocomplete({
-//         id: 'customized-hook-demo',
-//         defaultValue: [],
-//         multiple: true,
-//         options,
-//         getOptionLabel: (option) => option.title,
-//     });
-//
-//     return (
-//         <Root>
-//             <div {...getRootProps()}>
-//                 <Label {...getInputLabelProps()}>Customized hook</Label>
-//                 <InputWrapper ref={setAnchorEl} className={focused ? 'focused' : ''}>
-//                     {value.map((option, index) => (
-//                         <StyledTag label={option.title} {...getTagProps({ index })} />
-//                     ))}
-//                     <input {...getInputProps()} />
-//                 </InputWrapper>
-//             </div>
-//             {groupedOptions.length > 0 ? (
-//                 <Listbox {...getListboxProps()}>
-//                     {groupedOptions.map((option, index) => (
-//                         <li {...getOptionProps({ option, index })}>
-//                             <span>{option.title}</span>
-//                             <CheckIcon fontSize="small" />
-//                         </li>
-//                     ))}
-//                 </Listbox>
-//             ) : null}
-//         </Root>
-//     );
-// }
-//
-// SelectTags.propTypes = {
-//     options: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             title: PropTypes.string.isRequired,
-//             year: PropTypes.number.isRequired,
-//         })
-//     ).isRequired,
-// };
+/* eslint-disable */
+// eslint-disable-next-line no-unused-vars
+import * as React from 'react';
+import Radio from '@mui/material/Radio';
+import RadioGroup from '@mui/material/RadioGroup';
+import FormControlLabel from '@mui/material/FormControlLabel';
+import FormControl from '@mui/material/FormControl';
+import FormLabel from '@mui/material/FormLabel';
+
+export default function SelectTags(props){
+    return (
+        <FormControl>
+            <FormLabel id="demo-radio-buttons-group-label" style={{textAlign:'center', marginLeft:'80%'}}>Kategori</FormLabel>
+            <RadioGroup
+                aria-labelledby="demo-radio-buttons-group-label"
+                defaultValue="female"
+                name="radio-buttons-group"
+                size={"small"}
+                style={props.style}
+            >
+                <FormControlLabel value={props.kategori} control={<Radio />} label="Sejarah" />
+                <FormControlLabel value={props.kategori} control={<Radio />} label="Budaya" />
+                <FormControlLabel value={props.kategori} control={<Radio />} label="cahaya" />
+            </RadioGroup>
+        </FormControl>
+    );
+}

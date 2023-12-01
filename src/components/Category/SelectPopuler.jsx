@@ -4,11 +4,13 @@ import MenuItem from '@mui/material/MenuItem';
 import FormControl from '@mui/material/FormControl';
 import Select from '@mui/material/Select';
 
-export default function SelectSmall() {
-    const [age, setAge] = React.useState('');
+export default function SelectPopuler(props) {
+    const [kategori, setCategory] = React.useState('');
 
     const handleChange = (event) => {
-        setAge(event.target.value);
+        setCategory(event.target.value);
+        // eslint-disable-next-line react/prop-types
+        props.onChange(event.target.value);
     };
 
     return (
@@ -17,15 +19,21 @@ export default function SelectSmall() {
             <Select
                 labelId="demo-select-small-label"
                 id="demo-select-small"
-                value={age}
+                value={kategori}
                 label="Populer"
                 onChange={handleChange}
             >
                 <MenuItem value="">
                     <em>None</em>
                 </MenuItem>
-                <MenuItem value={20}>Biasa Aja</MenuItem>
-                <MenuItem value={10}>TerPopuler</MenuItem>
+                {/* eslint-disable-next-line react/prop-types */}
+                <MenuItem value={props.kategori}>Sejarah</MenuItem>
+                {/* eslint-disable-next-line react/prop-types */}
+                <MenuItem value={props.kategori}>Budaya</MenuItem>
+                {/* eslint-disable-next-line react/prop-types */}
+                <MenuItem value={props.kategori}>Cahaya</MenuItem>
+                {/* eslint-disable-next-line react/prop-types */}
+                <MenuItem value={props.kategori}>Cafe</MenuItem>
                 {/*<MenuItem value={30}>Thirty</MenuItem>*/}
             </Select>
         </FormControl>

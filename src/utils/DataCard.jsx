@@ -6,7 +6,7 @@ const DataCard = [
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city: 'Magelang',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
+        kategori: 'cahaya',
     },
     {
         title: 'Candi Prambanan',
@@ -15,7 +15,7 @@ const DataCard = [
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city: 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
+        kategori: 'pertemuan',
     },
     {
         title: 'Candi Ratu Boko',
@@ -24,7 +24,7 @@ const DataCard = [
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
+        kategori: 'olahan',
     },
     {
         title: 'Candi Sambisari',
@@ -33,31 +33,34 @@ const DataCard = [
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
-    },    {
+        kategori: 'peninggalan',
+    },
+    {
         title: 'Candi Sambisari',
         description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
         rating: 4.5,
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
-    },    {
+        kategori: 'cafe',
+    },
+    {
         title: 'Candi Sambisari',
         description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
         rating: 4.5,
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
-    },    {
+        kategori: 'Budaya',
+    },
+    {
         title: 'Candi Sambisari',
         description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
         rating: 4.5,
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
+        kategori: 'Sejarah',
     },
     {
         title: 'Pantai Parangtritis',
@@ -66,7 +69,7 @@ const DataCard = [
         image: 'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Budaya, Sejarah, Arsitektur',
+        kategori: 'kapal',
     }
 ]
 

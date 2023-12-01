@@ -31,7 +31,7 @@ const [mode, setMode] = React.useState('dark');
       <ThemeProvider theme={theme}>
         <CssBaseline />
         <div className='nav'>
-            <Header toogleColorMode={toogleColorMode}/>
+            <Header className='navBar' toogleColorMode={toogleColorMode}/>
           </div>
         <Routes>
           <Route path="/" Component={Welcome} />
