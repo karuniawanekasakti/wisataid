@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React from "react";
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -14,24 +15,31 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import navLinks from "../../utils/NavLinks";
 // import { Link } from "react-router-dom";
-import Link from '@mui/material/Link';
+// import Link from '@mui/material/Link';
+
+import Brightness4Icon from '@mui/icons-material/Brightness4';
+import Brightness7Icon from '@mui/icons-material/Brightness7';
+
+import { useTheme } from '@mui/material/styles';
 
 
 
-
-const Header = () => {
+const Header = (props) => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
+  const theme = useTheme();
+
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
   };
 
   const handleCloseNavMenu = () => {
-    {navLinks.map ((link) => (
-      <Link href={link.path} key={link.name}></Link>
-    ))}
+    // {navLinks.map ((link) => (
+    //   <Link href={link.path} key={link.name}></Link>
+    // ))}
+    setAnchorElNav(null);
   };
-  
+
   const Search = styled('div')(({ theme }) => ({
     position: 'relative',
     borderRadius: theme.shape.borderRadius,
@@ -46,7 +54,7 @@ const Header = () => {
       width: 'auto',
     },
   }));
-  
+
   const SearchIconWrapper = styled('div')(({ theme }) => ({
     padding: theme.spacing(0, 2),
     height: '100%',
@@ -56,7 +64,7 @@ const Header = () => {
     alignItems: 'center',
     justifyContent: 'center',
   }));
-  
+
   const StyledInputBase = styled(InputBase)(({ theme }) => ({
     color: 'inherit',
     '& .MuiInputBase-input': {
@@ -74,6 +82,7 @@ const Header = () => {
     },
   }));
 
+
   // const theme = createTheme({
   //   palette: {
   //     primary: {
@@ -87,7 +96,7 @@ const Header = () => {
 
 
   return (
-      <AppBar position="static" color="primary">
+      <AppBar position="static" color="primary" className='appBar'>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
@@ -142,7 +151,7 @@ const Header = () => {
             </Box>
             <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
             <Typography
-              variant="h5"
+              variant="h6"
               noWrap
               component="a"
               href="#app-bar-with-responsive-menu"
@@ -152,12 +161,12 @@ const Header = () => {
                 flexGrow: 1,
                 fontFamily: 'monospace',
                 fontWeight: 700,
-                letterSpacing: '.3rem',
+                letterSpacing: '.1rem',
                 color: 'inherit',
                 textDecoration: 'none',
               }}
             >
-              LOGO
+                Wisata ID
             </Typography>
             <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
               {navLinks.map((link) => (
@@ -165,13 +174,15 @@ const Header = () => {
                   key={link.name}
                   href={link.path}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: 'white', display: 'block' }}
+                  sx={{ my: 1, color: 'white', display: 'block' }}
                 >
                   {link.name}
                 </Button>
               ))}
             </Box>
-            
+              <IconButton sx={{ ml: 1 }} onClick={props.toogleColorMode} color="inherit">
+                {theme.palette.mode === 'dark' ? <Brightness7Icon /> : <Brightness4Icon />}
+              </IconButton>
             <Box>
             <Search>
               <SearchIconWrapper>

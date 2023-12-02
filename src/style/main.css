@@ -4,5 +4,14 @@
 
 .nav {
   z-index: 2; /* Adjusted z-index */
-  position: relative; /* Add this line */
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
+/*.navBar{*/
+/*  width: 100%;*/
+/*}*/
+
+/*.appBar{*/
+/*  width: 100%;*/
+/*}*/

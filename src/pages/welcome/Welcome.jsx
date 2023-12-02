@@ -6,13 +6,13 @@ import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRigh
 
 
 import HeroImage from '../../assets/img/background 1.png'
-import './welcome.css'
+import './Welcome.css'
 
 const Welcome = () => {
   return (
     <>
-      <div className='header'>
-        <div className='bg-hero'>
+      <div className='header' >
+        <div className='bg-hero' >
           <img src={HeroImage}/>
           <div className='inner'>
             <Stack spacing={1} direction={'column'}>
