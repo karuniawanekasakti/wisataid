@@ -1,0 +1,25 @@
+/* CarouselImage.css */
+.mobile-stepper {
+    width: 80%;
+    position: absolute;
+    justify-content: space-between;
+    margin-top: 30vh;
+    border-radius: 10px;
+}
+.mobile-stepper .MuiMobileStepper-dots {
+    position: absolute !important;
+    top: 30vh !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    justify-content: center !important;
+    font-size: large;
+}
+
+@media screen and (max-width: 400px) {
+    .mobile-stepper {
+        width: 80%;
+        position: absolute;
+        justify-content: center;
+        margin-top: 30vh;
+    }
+}

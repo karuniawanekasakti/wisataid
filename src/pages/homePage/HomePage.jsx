@@ -4,7 +4,7 @@ import Grid from '@mui/material/Grid';
 import CardComponent from "../../components/Card/CardComponent.jsx";
 import DataCard from "../../utils/DataCard.jsx";
 import './HomePage.css'
-import SelectPopuler from '../../components/Category/SelectPopuler.jsx';
+// import SelectPopuler from '../../components/Category/SelectPopuler.jsx';
 import SwipeableTemporaryDrawer from "../../components/DrawerFilter/DrawerFilter.jsx";
 // import SelectTags from "../../components/Tags/SelectTags.jsx";
 const HomePage = (props) => {
@@ -44,6 +44,11 @@ const HomePage = (props) => {
                                 avatar={data.logo}
                                 rating={data.rating}
                                 kategori={data.kategori}
+                                // to={{
+                                //     pathname: `/detail/${data.id}`,
+                                //     state: data,
+                                // }}
+                                id={data.id}
                             />
                         </Grid>
                     ))}
