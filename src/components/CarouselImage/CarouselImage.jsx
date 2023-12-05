@@ -24,20 +24,20 @@ export default function CarouselImage({ steps, activeStep, handleNext, handleBac
                 // '.MuiMobileStepper-dot': { backgroundColor: 'white' },
             }}
             nextButton={
-                <Button style={{fontWeight: 'bold',fontSize:'large'}} size="large" onClick={handleNext} disabled={activeStep === steps - 1}>
+                <Button style={{fontWeight: 'bold',fontSize:'large'}} size="large" onClick={handleNext}>
                     {theme.direction === 'rtl' ? (
                         <KeyboardArrowLeft color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>
                     ) : (
-                        <KeyboardArrowRight color="action" style={{fontSize:'3rem'}} sx={{ '&:hover': { color: 'primary.dark' }  }}/>
+                        <KeyboardArrowRight color="action" style={{fontSize:'3rem'}} sx={{ '&:hover': { color: 'primary.dark' } }}/>
                     )}
                 </Button>
             }
             backButton={
-                <Button style={{fontWeight:'bold',fontSize:'large'}} size="large" onClick={handleBack} disabled={activeStep === 0}>
+                <Button style={{fontWeight:'bold',fontSize:'large'}} size="large" onClick={handleBack}>
                     {theme.direction === 'rtl' ? (
-                        <KeyboardArrowRight color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' }   }}/>
+                        <KeyboardArrowRight color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>
                     ) : (
-                        <KeyboardArrowLeft color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' }  }}/>
+                        <KeyboardArrowLeft color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>
                     )}
                 </Button>
             }

@@ -13,7 +13,7 @@ import MailIcon from '@mui/icons-material/Mail';
 import ButtonComponent from "../Button/ButtonComponent.jsx";
 import SelectTags from "../Tags/SelectTags.jsx";
 
-export default function SwipeableTemporaryDrawer() {
+export default function SwipeableTemporaryDrawer(props) {
     const [state, setState] = React.useState({
         left: false,
     });
@@ -76,6 +76,7 @@ export default function SwipeableTemporaryDrawer() {
                         // endIcon={<InboxIcon />}
                         onClick={toggleDrawer(anchor,true)}
                         style={{borderRadius:'20px'}}
+                        className={props.className}
                     />
                     <SwipeableDrawer
                         anchor={anchor}
