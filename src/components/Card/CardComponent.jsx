@@ -18,6 +18,7 @@ import { red } from '@mui/material/colors';
 // import MoreVertIcon from '@mui/icons-material/MoreVert';
 import ButtonComponent from "../Button/ButtonComponent.jsx";
 import RatingComponent from "../Rating/RatingComponent.jsx";
+// import { useHistory } from "react-router-dom";
 // import Container from "@mui/material/Container";
 
 // const ExpandMore = styled((props) => {
@@ -32,11 +33,24 @@ import RatingComponent from "../Rating/RatingComponent.jsx";
 // }));
 
 export default function CardComponent(props) {
+    // const history = useHistory();
     // const [expanded, setExpanded] = React.useState(false);
 
     // const handleExpandClick = () => {
     //     setExpanded(!expanded);
     // };
+    // const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
+    // React.useEffect(() => {
+    //     const interval = setInterval(() => {
+    //         setCurrentImageIndex((prev) => {
+    //             if (prev === props.image.length - 1) {
+    //                 return 0;
+    //             }
+    //             return prev + 1;
+    //         });
+    //     }, 3000);
+    //     return () => clearInterval(interval);
+    // }, [props.image.length]);
 
     return (
         <Card sx={{ maxWidth: 345}} style={{ width: '100%'}}>
@@ -51,7 +65,7 @@ export default function CardComponent(props) {
             <CardMedia
                 component="img"
                 height="194"
-                image={props.image}
+                image={props.image[0]}
                 alt={props.alt}
             />
             <CardContent>
@@ -76,6 +90,7 @@ export default function CardComponent(props) {
                 <ButtonComponent
                     text= "Lihat Detail"
                     size= "small"
+                    to={`/detail/${props.id}`}
                 />
                 </div>
             </CardContent>
