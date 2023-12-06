@@ -10,18 +10,25 @@ import React from 'react';
 
 
 function App() {
-    const [mode, setMode] = React.useState('dark');
+    const [mode, setMode] = React.useState(localStorage.getItem('mode') || 'dark');
 
+    // const toogleColorMode = () => {
+    //     setMode(mode === 'dark' ? 'light' : 'dark');
+    //     console.log(mode)
+    // }
     const toogleColorMode = () => {
-        setMode(mode === 'dark' ? 'light' : 'dark');
-        console.log(mode)
-    }
-
+        const newMode = mode === 'dark' ? 'light' : 'dark';
+        localStorage.setItem('mode', newMode);
+        setMode(newMode);
+    };
     const theme = React.useMemo(
         () =>
             createTheme({
                 palette: {
                     mode,
+                    button: {
+                        main: mode === 'light' ? '#ffffff' : '#000000', //tambah ini supaya tidak ribet atur warna button
+                    },
                 },
             }),
         [mode],

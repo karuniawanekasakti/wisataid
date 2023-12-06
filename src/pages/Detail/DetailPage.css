@@ -1,3 +1,22 @@
+.btnTitle {
+    display: flex;
+    flex-wrap: wrap;
+}
+.titleDetail {
+    margin-top: 10px !important;
+}
+.myButton {
+    margin-right: 10px !important;
+    border-radius: 50%;
+    padding: 5px 10px;
+    /*background-color: white !important;*/
+}
+.mapIcon iframe {
+    border-radius: 20px;
+    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);*/
+
+}
+
 /*responsive 469*/
 @media screen and (max-width: 469px) {
     .titleDetail {
@@ -17,15 +36,15 @@
     span {
         font-size: 14px !important;
     }
+    .mapIcon iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
 }
-.btnTitle {
-    display: flex;
-    flex-wrap: wrap;
-}
-.titleDetail {
-    margin-top: 10px !important;
-}
-.myButton {
-    margin-right: 10px !important;
-    /*background-color: white !important;*/
+
+@media screen and (max-width: 1200px) {
+    .mapIcon iframe {
+        width: 100% !important;
+        /*height: 100% !important;*/
+    }
 }

@@ -10,6 +10,7 @@ import './DetailPage.css';
 import RatingComponent from "../../components/Rating/RatingComponent.jsx";
 import Grid from "@mui/material/Grid";
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
+// import MapComponent from '../../components/Map/MapComponent.jsx';
 import ReplyIcon from '@mui/icons-material/Reply';
 
 export default function DetailPage() {
@@ -89,13 +90,14 @@ export default function DetailPage() {
                         <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
                     </Grid>
                     <Grid item xs={12} md={6}>
-                        <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
-                        <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
-                        <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
-                        <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
-                        <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
-                        <Typography style={{marginTop: '15px'}} variant="body1">{data.description}</Typography>
                         {/* Tempatkan komponen peta Anda di sini */}
+                        {/*<MapComponent lat={data.lat} lng={data.lng}/>*/}
+                        <Box className='mapIcon'>
+                            <iframe
+                                src={data.maps}
+                                width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"
+                                referrerPolicy="no-referrer-when-downgrade"></iframe>
+                        </Box>
                     </Grid>
                 </Grid>
             </Box>
