@@ -14,7 +14,6 @@
     justify-content: center !important;
     font-size: large;
 }
-
 @media screen and (max-width: 400px) {
     .mobile-stepper {
         width: 80%;

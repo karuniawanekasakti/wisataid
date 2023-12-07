@@ -16,8 +16,7 @@ const Welcome = () => {
           <img src={HeroImage}/>
           <div className='inner'>
             <Stack spacing={1} direction={'column'}>
-
-              <h1>Mau kemana hari ini?</h1>
+              <h1 className='sub'>Mau kemana hari ini?</h1>
               <SelectComponent/>
               <div className='button'>
                 <ButtonComponent text='Cari' endIcon={<KeyboardArrowRightRoundedIcon fontSize='small'/>} size='large'/>

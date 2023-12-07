@@ -92,12 +92,12 @@ export default function DetailPage() {
                     <Grid item xs={12} md={6}>
                         {/* Tempatkan komponen peta Anda di sini */}
                         {/*<MapComponent lat={data.lat} lng={data.lng}/>*/}
-                        <Box className='mapIcon'>
+                        <div className='mapIcon'>
                             <iframe
                                 src={data.maps}
                                 width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"
                                 referrerPolicy="no-referrer-when-downgrade"></iframe>
-                        </Box>
+                        </div>
                     </Grid>
                 </Grid>
             </Box>
