@@ -1,13 +1,12 @@
 // eslint-disable-next-line no-unused-vars
 import * as React from 'react';
-import UndrawAnimation from '../../assets/undraw_void_-3-ggu.svg';
-
-const NotificationNull = (props) => {
+import UndrawAnimation from '../../assets/undraw_page_not_found_re_e9o6.svg';
+import './NotificationNull.css';
+const NotificationNull = () => {
     return (
-        // eslint-disable-next-line react/prop-types
-        <div className={`${props.className}`}>
+        <div className='undrawContainer'>
             <img className='undrawImg' src={UndrawAnimation} alt="undraw_animation"/>
-            {/*<h1 className='undrawText'>Oops, no data found!</h1>*/}
+            {/*<h1 className='undrawText'>Opps, data not found</h1>*/}
         </div>
     );
 }

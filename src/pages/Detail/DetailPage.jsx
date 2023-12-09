@@ -1,16 +1,13 @@
 // eslint-disable-next-line no-unused-vars
 import * as React from 'react';
-// import { useLocation } from "react-router-dom";
 import {useParams} from "react-router-dom";
 import DataCard from "../../utils/DataCard.jsx";
 import {Box, Typography, Container, Paper} from "@mui/material";
-// import Button from "@mui/material/Button";
 import CarouselImage from "../../components/CarouselImage/CarouselImage.jsx";
 import './DetailPage.css';
 import RatingComponent from "../../components/Rating/RatingComponent.jsx";
 import Grid from "@mui/material/Grid";
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
-// import MapComponent from '../../components/Map/MapComponent.jsx';
 import ReplyIcon from '@mui/icons-material/Reply';
 
 export default function DetailPage() {
@@ -26,7 +23,7 @@ export default function DetailPage() {
                 }
                 return prev + 1;
             });
-        }, 2000);
+        }, 3000);
         return () => clearInterval(interval);
     }, [currentImageIndex, data.image.length]);
 

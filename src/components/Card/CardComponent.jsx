@@ -13,7 +13,7 @@ import RatingComponent from "../Rating/RatingComponent.jsx";
 
 export default function CardComponent(props) {
     return (
-        <Card sx={{ maxWidth: 345}} style={{ width: '100%'}}>
+        <Card sx={{ maxWidth: 345}} style={{ width: '100%',boxShadow:'0 8px 16px rgba(0,0,0,0.4)'}}>
             <CardHeader
                 avatar={
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.avatar}>
