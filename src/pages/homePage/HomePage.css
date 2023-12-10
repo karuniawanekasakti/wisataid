@@ -2,6 +2,7 @@
     margin-top: 5vh;
     margin-bottom: 10vh;
     padding: 20px;
+    width: 100%;
 }
 .home-page-container {
     display: flex;
@@ -14,25 +15,21 @@ h1{
 .filter {
     margin-bottom: 16px !important;
 }
-.btnFilter {
-    display: flex;
-    flex-wrap: wrap;
-}
 /*responsive 320*/
 @media screen and (max-width: 320px) {
-    h1{
+    .titleHome{
         font-size: 20px !important; ;
     }
 }
 /*responsvie 352-387*/
 @media screen and (min-width: 352px) and (max-width: 387px) {
-    h1{
+    .titleHome{
         font-size: 26px !important; ;
     }
 }
 /*responsive 465*/
 @media screen and (max-width: 465px) {
-    h1{
+    .titleHome{
         margin-top: 800px !important;
     }
     .filter{
@@ -40,8 +37,47 @@ h1{
     }
 }
 @media screen and (max-width: 1200px) {
-    h1 {
+    .titleHome {
         margin-top: 15px !important;
     }
 }
+@media screen and (max-width: 680px) {
+    .btnFilter {
+        margin-top: 0 !important;
+        justify-content: normal !important;
+    }
+}
+/*.undrawNotif img {*/
+/*    width: 500px;*/
+/*    position: absolute;*/
+/*    top: 50% !important;*/
+/*    left: 50% !important;*/
+/*    transform: translate(-50%, -50%) !important;*/
+/*}*/
 
+/*.undrawNotif {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    height: 100vh;*/
+/*    left: 1000000px !important;*/
+/*    position: relative;*/
+/*}*/
+
+/*@media screen and (max-width: 465px) {*/
+/*    .undrawNotif img {*/
+/*        max-width: 250px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (min-width: 352px) and (max-width: 387px) {*/
+/*    .undrawNotif img {*/
+/*        max-width: 200px;*/
+/*    }*/
+/*}*/
+
+/*@media screen and (max-width: 320px) {*/
+/*    .undrawNotif img {*/
+/*        max-width: 150px;*/
+/*    }*/
+/*}*/

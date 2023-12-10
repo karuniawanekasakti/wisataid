@@ -26,7 +26,7 @@ export default function CarouselImage({ steps, activeStep, handleNext, handleBac
             nextButton={
                 <Button style={{fontWeight: 'bold',fontSize:'large'}} size="large" onClick={handleNext}>
                     {theme.direction === 'rtl' ? (
-                        <KeyboardArrowLeft color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>
+                        <KeyboardArrowLeft color="action"  style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>
                     ) : (
                         <KeyboardArrowRight color="action" style={{fontSize:'3rem'}} sx={{ '&:hover': { color: 'primary.dark' } }}/>
                     )}

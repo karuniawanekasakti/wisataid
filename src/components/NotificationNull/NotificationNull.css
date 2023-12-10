@@ -1,0 +1,43 @@
+body {
+    overflow-x: hidden;
+}
+
+
+.undrawContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100% ;
+    position: relative;
+}
+
+.undrawImg {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    /*max-height: auto;*/
+    margin: auto;
+    position: absolute;
+    top: 50%;
+    left: 50% ;
+    transform: translate(-50%, 50%);
+}
+
+@media screen and (max-width: 600px) {
+    .undrawImg {
+        max-width: 220px;
+    }
+}
+
+@media screen and (min-width: 681px) {
+    .undrawImg {
+        max-width: 450px;
+    }
+}
+
+/*@media screen and (min-width: 1024px) {*/
+/*    .undrawImg {*/
+/*        max-width: 400px;*/
+/*    }*/
+/*}*/

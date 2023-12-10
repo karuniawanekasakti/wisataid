@@ -13,8 +13,7 @@
 }
 .mapIcon iframe {
     border-radius: 20px;
-    /*box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.5);*/
-
+    width: 100%;
 }
 
 /*responsive 469*/
@@ -45,6 +44,6 @@
 @media screen and (max-width: 1200px) {
     .mapIcon iframe {
         width: 100% !important;
-        /*height: 100% !important;*/
+        /*margin-left: 20px !important;*/
     }
 }
