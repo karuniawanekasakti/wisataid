@@ -43,7 +43,7 @@ function App() {
                 </div>
                 <Routes>
                     <Route path="/" Component={Welcome}/>
-                    <Route path="/list-wisata" Component={ListWisata}/>
+                    <Route path="/list-wisata/:city" Component={ListWisata}/>
                     <Route path="/home" Component={HomePage}/>
                     <Route path="/detail/:id" Component={DetailPage}/>
                 </Routes>

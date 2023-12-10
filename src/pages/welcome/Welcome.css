@@ -50,6 +50,11 @@
   margin-bottom: 16px;
 }
 
+
+a {
+  z-index: 99;
+  position: relative;
+}
 /*.nav {*/
 /*  z-index: 2; !* Adjusted z-index *!*/
 /*  position: relative; !* Add this line *!*/

@@ -51,6 +51,7 @@ export default function CardComponent(props) {
                     text= "Lihat Detail"
                     size= "small"
                     to={`/detail/${props.id}`}
+                    variant= "contained"
                 />
                 </div>
             </CardContent>

@@ -8,9 +8,9 @@ import './DetailPage.css';
 import RatingComponent from "../../components/Rating/RatingComponent.jsx";
 import Grid from "@mui/material/Grid";
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
-import ReplyIcon from '@mui/icons-material/Reply';
 
 export default function DetailPage() {
+
     const {id} = useParams();
     const data = DataCard.find((data) => data.id === Number(id));
 
@@ -51,14 +51,17 @@ export default function DetailPage() {
 
     return (<Container maxWidth="100%">
         <Paper elevation={0} sx={{p: 4, mt: 4}}>
-            <Box className='btnTitle' sx={{display: 'flex', alignItems: 'center'}}>
-                <ButtonComponent
+            <Box sx={{marginTop: 2,}}>
+            <ButtonComponent
                     className='myButton'
                     data-testid="back-button"
-                    endIcon={<ReplyIcon/>}
+                    text='Kembali'
                     size="small"
-                    to={`/home`}
+                    to={`/list-wisata/:city`}
+                    variant="outlined"
                 />
+            </Box>
+            <Box className='btnTitle' sx={{display: 'flex', alignItems: 'center'}}>
                 <Typography className='titleDetail' variant="h4" gutterBottom>
                     {data.title} <span
                     style={{color: 'gray', fontSize: '1.2rem', fontStyle: 'italic'}}> {data.city}</span>
