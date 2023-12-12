@@ -17,7 +17,7 @@ const HomePage = () => {
     const [anchorEl, setAnchorEl] = React.useState({Rating: null, Kategori: null, City: null});
     const [ratingButtonText, setRatingButtonText] = React.useState('Rating');
     const [kategoriButtonText, setKategoriButtonText] = React.useState('Kategori');
-    const [cityButtonText, setCityButtonText] = React.useState('City');
+    const [cityButtonText, setCityButtonText] = React.useState('Kabupaten');
 
     const ratingOptions = [1, 2, 3, 4, 5];
     const kategoriOptions = [...new Set(DataCard.map(data => data.kategori))];

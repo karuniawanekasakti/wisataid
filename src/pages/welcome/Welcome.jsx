@@ -8,22 +8,36 @@ import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRigh
 
 import HeroImage from '../../assets/img/background 1.png'
 import './Welcome.css'
+import { useEffect } from 'react';
 
 const Welcome = () => {
+  const BASE_URL = 'http://localhost:5000/wisata/all/kota';
   const [selectedCity, setSelectedCity] = React.useState('');
+  const [city, setCity] = React.useState([]);
 
-  const cities = [
-    { label: 'Yogyakarta', value: "Yogyakarta" },
-    { label: 'Malang', value: "Malang" },
-    { label: 'Surabaya', value: "Surabaya" },
-    // Add more cities as needed
-  ];
+
+  useEffect(()=> {
+    const getWisataCity = async () => {
+      try {
+        const response = await fetch(BASE_URL);
+        if (!response.ok) {
+          throw new Error(response.statusText);
+        }
+        const data = await response.json();
+        setCity(data.data);
+        console.log(data);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    getWisataCity();
+  }, []);
 
   return (
     <>
-      <div className='header' >
-        <div className='bg-hero' >
-          <img src={HeroImage}/>
+      <div className='header'>
+        <div className='bg-hero'>
+          <img src={HeroImage} alt="Hero Image" />
           <div className='inner'>
             <Stack spacing={1} direction={'column'}>
               <h1 className='sub'>Mau kemana hari ini?</h1>
@@ -36,10 +50,19 @@ const Welcome = () => {
                 size="medium"
                 label="City"
                 placeholder="Pilih Kota tujuanmu"
-                menuItems={cities}
+                menuItems={Array.isArray(city) ? city.map((item) => ({
+                  label: item.kota,
+                  value: item.kota,
+                })) : []}
               />
               <div className='button'>
-                <ButtonComponent text='Cari' endIcon={<KeyboardArrowRightRoundedIcon fontSize='small'/>} size='medium' variant='contained' to={`/list-wisata/${selectedCity}`} />
+                <ButtonComponent
+                  text='Cari'
+                  endIcon={<KeyboardArrowRightRoundedIcon fontSize='small' />}
+                  size='medium'
+                  variant='contained'
+                  to={`/list-wisata/${selectedCity}`}
+                />
               </div>
               <a href="/home">Skip</a>
             </Stack>

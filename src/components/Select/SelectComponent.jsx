@@ -8,7 +8,7 @@ import InputBase from '@mui/material/InputBase';
 
 const BootstrapInput = styled(InputBase)(({ theme }) => ({
   'label + &': {
-    marginTop: theme.spacing(1),
+    marginTop: theme.spacing(0.5),
   },
   '& .MuiInputBase-input': {
     borderRadius: 4,
@@ -25,6 +25,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
     },
   },
 }));
+
 export default function SelectComponent(props) {
   return (
     <div>
@@ -35,8 +36,16 @@ export default function SelectComponent(props) {
           value={props.value}
           onChange={props.onChange}
           input={<BootstrapInput />}
+          MenuProps={{
+            PaperProps: {
+              style: {
+                maxHeight: 200, // Set your desired max height
+                overflowY: 'auto', // Enable scrolling
+              },
+            },
+          }}
         >
-          <MenuItem value="">{props.placeholder}</MenuItem>
+          <MenuItem value="" >{props.placeholder}</MenuItem>
           {props.menuItems.map((item) => (
             <MenuItem key={item.value} value={item.value}>
               {item.label}
