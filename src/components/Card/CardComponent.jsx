@@ -16,17 +16,17 @@ export default function CardComponent(props) {
         <Card sx={{ maxWidth: 345}} style={{ width: '100%',boxShadow:'0 8px 16px rgba(0,0,0,0.4)'}}>
             <CardHeader
                 avatar={
-                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.avatar}>
+                    <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.logo_daerah}>
                     </Avatar>
                 }
-                title={props.city}
+                title={props.kota}
                 subheader={props.kategori}
             />
             <CardMedia
                 component="img"
                 height="194"
-                image={props.image[0]}
-                alt={props.alt}
+                image={props.foto_wisata}
+                alt={props.nama_wisata}
             />
             <CardContent>
                 <div style={{marginBottom: '10px'}}>
@@ -36,7 +36,7 @@ export default function CardComponent(props) {
                     <RatingComponent rating={props.rating}/>
                 </div>
                 <Typography gutterBottom variant="h5" component="div">
-                    {props.title}
+                    {props.nama_wisata}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{
                     display: '-webkit-box',
@@ -44,14 +44,14 @@ export default function CardComponent(props) {
                     WebkitBoxOrient: 'vertical',
                     WebkitLineClamp: 3,
                 }} >
-                    {props.description}
+                    {props.deskripsi}
                 </Typography>
                 <div style={{marginTop:'20px', display: "flex", justifyContent: "end"}}>
-                <ButtonComponent
-                    text= "Lihat Detail"
-                    size= "small"
-                    to={`/detail/${props.id}`}
-                />
+                    <ButtonComponent
+                        text= "Lihat Detail"
+                        size= "small"
+                        to={`/detail/${props.id}`}
+                    />
                 </div>
             </CardContent>
         </Card>

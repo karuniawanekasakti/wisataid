@@ -126,6 +126,214 @@ const DataCard = [
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
+    },
+    {
+        title: 'Pantai Parangtritis',
+        description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
+        rating: 1.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city: 'Bantul',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'kapal',
+        lat: -8.006667,
+        lng: 110.320556,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     }
 ].map((item, index) => ({...item, id: index + 1 }));
 

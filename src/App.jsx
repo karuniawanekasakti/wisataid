@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom'
 import Welcome from './pages/welcome/Welcome'
-import ListWisata from './pages/listWIsata/ListWisata'
-import HomePage from './pages/homePage/HomePage';
+// import ListWisata from './pages/listWIsata/ListWisata'
+import ListWisata from './pages/homePage/ListWisata.jsx';
 import DetailPage from './pages/Detail/DetailPage';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -43,8 +43,8 @@ function App() {
                 </div>
                 <Routes>
                     <Route path="/" Component={Welcome}/>
+                    {/*<Route path="/list-wisata" Component={ListWisata}/>*/}
                     <Route path="/list-wisata" Component={ListWisata}/>
-                    <Route path="/home" Component={HomePage}/>
                     <Route path="/detail/:id" Component={DetailPage}/>
                 </Routes>
             </ThemeProvider>
