@@ -19,24 +19,24 @@ export default function CardComponent(props) {
                     <Avatar sx={{ bgcolor: red[500] }} aria-label="recipe" src={props.avatar}>
                     </Avatar>
                 }
-                title={props.city}
+                title={props.kota}
                 subheader={props.kategori}
             />
             <CardMedia
                 component="img"
                 height="194"
-                image={props.image[0]}
-                alt={props.alt}
+                image={props.image}
+                alt={props.title}
             />
-            <CardContent>
+            <CardContent style={{height:'280px'}}>
                 <div style={{marginBottom: '10px'}}>
                     <Typography variant="caption" display="block">
                         <b>Rating</b>
                     </Typography>
-                    <RatingComponent rating={props.rating}/>
+                    <RatingComponent rating={Number(props.rating)}/>
                 </div>
-                <Typography gutterBottom variant="h5" component="div">
-                    {props.title}
+                <Typography gutterBottom variant="h5" style={{fontSize:'22px'}} component="div">
+                    {props.nama_wisata}
                 </Typography>
                 <Typography variant="body1" color="text.secondary" sx={{
                     display: '-webkit-box',
@@ -44,7 +44,7 @@ export default function CardComponent(props) {
                     WebkitBoxOrient: 'vertical',
                     WebkitLineClamp: 3,
                 }} >
-                    {props.description}
+                    {props.deskripsi}
                 </Typography>
                 <div style={{marginTop:'20px', display: "flex", justifyContent: "end"}}>
                 <ButtonComponent
