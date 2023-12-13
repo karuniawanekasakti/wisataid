@@ -3,25 +3,48 @@ import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CardComponent from "../../components/Card/CardComponent.jsx";
-import DataCard from "../../utils/DataCard.jsx";
+// import DataCard from "../../utils/DataCard.jsx";
 import './ListWisata.css'
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
 import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import NotificationNull from '../../components/NotificationNull/NotificationNull.jsx';
+import {useState, useEffect} from "react";
 
 const HomePage = () => {
-    const [filteredData, setFilteredData] = React.useState(DataCard);
-    // eslint-disable-next-line no-unused-vars
-    const [filterValue, setFilterValue] = React.useState('');
-    const [anchorEl, setAnchorEl] = React.useState({Rating: null, Kategori: null, City: null});
+    const [data, setData] = useState([]);
+    const [filteredData, setFilteredData] = useState([]);
+    const [anchorEl, setAnchorEl] = useState({rating: null, kategori: null, kota: null});
+    const BASE_URL = 'http://47.128.228.117:4000/wisata';
+    const IMAGE_URL =  `http://47.128.228.117:4000/images/`;
+    const ratingOptions = [1, 2, 3, 4, 5];
+    const kategoriOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kategori))] : [];
+    const kotaOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kota))] : [];
     const [ratingButtonText, setRatingButtonText] = React.useState('Rating');
     const [kategoriButtonText, setKategoriButtonText] = React.useState('Kategori');
-    const [cityButtonText, setCityButtonText] = React.useState('City');
+    const [cityButtonText, setCityButtonText] = React.useState('Kabupaten');
 
-    const ratingOptions = [1, 2, 3, 4, 5];
-    const kategoriOptions = [...new Set(DataCard.map(data => data.kategori))];
-    const cityOptions = [...new Set(DataCard.map(data => data.city))];
+    const [ratingFilter, setRatingFilter] = useState(null);
+    const [kategoriFilter, setKategoriFilter] = useState(null);
+    const [cityFilter, setCityFilter] = useState(null);
+
+    useEffect(() => {
+        const getDataWista = async () => {
+            try {
+                const response = await fetch(BASE_URL);
+                if (!response.ok) {
+                    throw new Error(response.statusText);
+                }
+            const data = await response.json();
+            setData(data.data);
+            setFilteredData(data.data);
+            console.log(data);
+            } catch (error) {
+                console.log(error);
+            }
+        };
+        getDataWista();
+    }, []);
 
     const getOptions = (filterName) => {
         switch (filterName) {
@@ -30,14 +53,13 @@ const HomePage = () => {
             case 'Kategori':
                 return kategoriOptions;
             case 'City':
-                return cityOptions;
+                return kotaOptions;
             default:
                 return [];
         }
     };
 
     const handleOpen = (filterName, event) => {
-        setFilterValue('');
         setAnchorEl(prevState => ({...prevState, [filterName]: event.currentTarget}));
     };
 
@@ -45,21 +67,35 @@ const HomePage = () => {
         setAnchorEl(prevState => ({...prevState, [filterName]: null}));
     };
     const filterByCategory = (category) => {
-        const newData = DataCard.filter(data => data.kategori.toLowerCase() === category.toLowerCase());
-        setFilteredData(newData);
+        setKategoriFilter(category);
         setKategoriButtonText(category);
     };
 
     const filterByCity = (city) => {
-        const newData = DataCard.filter(data => data.city.toLowerCase() === city.toLowerCase());
-        setFilteredData(newData);
+        setCityFilter(city);
         setCityButtonText(city);
     };
 
-    const filterByRating = (rating) => {
-        const ratingNumber = Number(rating);
-        const newData = DataCard.filter(data => data.rating === ratingNumber);
+    useEffect(() => {
+        let newData = [...data];
+
+        if (ratingFilter !== null) {
+            newData = newData.filter(data => Math.floor(data.rating) === ratingFilter);
+        }
+
+        if (kategoriFilter !== null) {
+            newData = newData.filter(data => data.kategori.toLowerCase() === kategoriFilter.toLowerCase());
+        }
+
+        if (cityFilter !== null) {
+            newData = newData.filter(data => data.kota.toLowerCase() === cityFilter.toLowerCase());
+        }
+
         setFilteredData(newData);
+    }, [ratingFilter, kategoriFilter, cityFilter, data]);
+
+    const filterByRating = (rating) => {
+        setRatingFilter(Number(rating));
         setRatingButtonText(`${rating} Star`);
     };
 
@@ -68,6 +104,32 @@ const HomePage = () => {
         {name: 'Kategori', action: filterByCategory},
         {name: 'City', action: filterByCity},
     ];
+
+    const renderCardComponent = (data) => {
+        try {
+            console.log(data);
+
+            const imageUrl = `${IMAGE_URL}${data.foto_wisata}`;
+            const avatarUrl = `${IMAGE_URL}${data.logo_daerah}`;
+
+            return (
+                <CardComponent
+                    className='cardHome'
+                    nama_wisata={data.nama_wisata}
+                    image={imageUrl} // use imageUrl
+                    deskripsi={data.deskripsi}
+                    kota={data.kota}
+                    avatar={avatarUrl} // use avatarUrl
+                    rating={parseFloat(data.rating)}
+                    kategori={data.kategori}
+                    id={data.id ? data.id.toString() : ''}
+                />
+            );
+        } catch (error) {
+            console.log(error);
+            return null;
+        }
+    };
     return (
         <div className='home-page-container'>
             <div className='list'>
@@ -120,17 +182,7 @@ const HomePage = () => {
                         filteredData.map((data, index) => (
                             <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
                                 <Box minWidth={300}>
-                                    <CardComponent
-                                        className='cardHome'
-                                        title={data.title}
-                                        image={data.image}
-                                        description={data.description}
-                                        city={data.city}
-                                        avatar={data.logo}
-                                        rating={data.rating}
-                                        kategori={data.kategori}
-                                        id={data.id}
-                                    />
+                                    {renderCardComponent(data)}
                                 </Box>
                             </Grid>
                         ))
