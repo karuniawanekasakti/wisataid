@@ -2,6 +2,7 @@ import {Routes, Route} from 'react-router-dom'
 import Welcome from './pages/welcome/Welcome'
 // import ListWisata from './pages/listWIsata/ListWisata'
 import ListWisata from './pages/homePage/ListWisata.jsx';
+import LandingPage from './pages/landingPage/LandingPage.jsx';
 import DetailPage from './pages/Detail/DetailPage';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
@@ -45,6 +46,7 @@ function App() {
                     <Route path="/" Component={Welcome}/>
                     {/*<Route path="/list-wisata" Component={ListWisata}/>*/}
                     <Route path="/list-wisata" Component={ListWisata}/>
+                    <Route path="/LandingPage" Component={LandingPage}/>
                     <Route path="/detail/:id" Component={DetailPage}/>
                 </Routes>
             </ThemeProvider>
