@@ -87,9 +87,9 @@ export default function LandingPage() {
         }}
       >
         <Grid container spacing={2}>
-<Grid item xs={12} sm={12} md={6} lg={6} textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-  <img src={SimbolicImage} alt="Boy at the Beach" sx={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }} />
-</Grid>
+            <Grid item xs={12} sm={12} md={6} lg={6} textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+              <img src={SimbolicImage} alt="Boy at the Beach" sx={{ maxWidth: '100%', maxHeight: '100%', width: 'auto', height: 'auto' }} />
+            </Grid>
 
           <Grid item xs={12} sm={12} md={6} lg={6}>
             <DemoPaper variant="string">
@@ -142,41 +142,23 @@ export default function LandingPage() {
                     </>)}
                 </Box>
             </Paper>            
-          </Grid>        
-        </Grid>
-        {/*Di bawah ini adalah filter data by kategori*/}
-        <Grid container spacing={2}>
-{/*          <Grid item xs={12} marginTop={2} marginBottom={2} textAlign={'center'}>
-            <VariantButtonGroup/>
           </Grid>
-          <Grid item container spacing={2} marginBottom={4} alignItems={'center'}>
-            {filteredData.map((item) => (
-              <Grid item key={item.id} item xs={12} sm={4} md={4} lg={4}>
-                  <Paper sx={{ borderRadius: '10px', backgroundColor: 'none', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.5)' }}>
-                  <img src={item.image[0]} alt={item.title} style={{ width: '100%', height: '200px', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }} />
-                   <Typography variant="h6" sx={{fontWeight: 'bold', textAlign: 'center'}}>{item.title}</Typography>
-                  </Paper>
-              </Grid>     
-            ))}
-          </Grid>*/}
-          <Grid item xs={12} marginTop={2} marginBottom={2} textAlign={'center'}>
-            <div>
+        {/*Di bawah ini adalah filter data by kategori*/}
+          <Grid item xs={12} sm={12} md={12} lg={12} style={{textAlign: 'center', marginTop: '15px'}}>
               <ButtonGroup onSelectCategory={handleCategorySelect} />
-
-              <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '20px' }}>
+          </Grid>
+          <Grid item container textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
                 {filteredData.map((item) => (
-                  <Card key={item.id} style={{ width: '300px', margin: '10px' }}>
-                    <img src={item.image[0]} alt={item.title} style={{ width: '100%', height: '200px' }} />
-                    <CardContent>
-                      <Typography variant="h6">{item.title}</Typography>
-                      <Typography>{item.description}</Typography>
-                    </CardContent>
-                  </Card>
+                  <Grid item 
+                  key={item.id} style={{ width: '300px', margin: '10px' }}>
+                    <Paper sx={{ borderRadius: '10px', backgroundColor: 'none', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.5)' }}>
+                        <img src={item.image[0]} alt={item.title} style={{ width: '100%', height: 'auto', borderTopLeftRadius: '10px', borderTopRightRadius: '10px' }} />
+                        <Typography variant="h6">{item.title}</Typography>
+                    </Paper>
+                  </Grid>
                 ))}
-              </div>
-            </div>
-          </Grid> 
-        </Grid>                
+          </Grid>                               
+        </Grid>             
       </Container>
     </React.Fragment>
     );
