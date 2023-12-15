@@ -12,8 +12,17 @@ h1{
   font-size: 30px !important;
   margin-bottom: 6px !important;
 }
-.filter {
-  margin-bottom: 16px !important;
+/*.filter {*/
+/*  margin-bottom: 16px !important;*/
+/*}*/
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear;
 }
 /*responsive 320*/
 @media screen and (max-width: 320px) {
@@ -35,13 +44,16 @@ h1{
   .filter{
       top: 23px !important;
   }
+  .btnFilter{
+      display: grid;
+  }
 }
 @media screen and (max-width: 1200px) {
   .titleHome {
       margin-top: 15px !important;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: 880px) {
   .btnFilter {
       margin-top: 0 !important;
       justify-content: normal !important;

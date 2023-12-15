@@ -11,7 +11,7 @@ import './Welcome.css'
 import { useEffect } from 'react';
 
 const Welcome = () => {
-  const BASE_URL = 'http://localhost:5000/wisata/all/kota';
+  const BASE_URL = 'http://47.128.228.117:4000/wisata/all/kota';
   const [selectedCity, setSelectedCity] = React.useState('');
   const [city, setCity] = React.useState([]);
 
