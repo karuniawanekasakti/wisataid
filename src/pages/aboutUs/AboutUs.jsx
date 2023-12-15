@@ -11,6 +11,44 @@ import MailIcon from '@mui/icons-material/Mail';
 import LanguageIcon from '@mui/icons-material/Language';
 import './AboutUs.css';
 
+  const teamMembers = [
+    {
+      id: 1,
+      name: 'Karuniawan Ekasakti',
+      role: 'Front-End Developer',
+      university: 'Universitas Gadjah Mada',
+      image: 'https://drive.google.com/uc?id=1wryo7xCdgGdY7Lla7bgV94w8Vts3YbmV',
+    },
+    {
+      id: 2,
+      name: 'Farhan Maulana Pangestu',
+      role: 'Front-End Developer',
+      university: 'Universitas Alma Ata',
+      image: 'https://drive.google.com/uc?id=1KdD0lLUqBJu40iJ430HdKL2lUupGSVlB',
+    },
+    {
+      id: 3,
+      name: 'Ridwan Maulana',
+      role: 'Front-End Developer',
+      university: 'Universitas Alma Ata',
+      image: 'https://drive.google.com/uc?id=1s4qtA-oBm2vnc0PI-YTver1oWUAQtX8z',
+    },
+    {
+      id: 4,
+      name: 'Yahya Khaliman Indrayana',
+      role: 'Back-End-End Developer',
+      university: 'Universitas Amikom Surakarta',
+      image: 'https://drive.google.com/uc?id=1wryo7xCdgGdY7Lla7bgV94w8Vts3YbmV',
+    },
+    {
+      id: 5,
+      name: 'Hana Amanda',
+      role: 'UI/UX Designer',
+      university: 'Universitas Teknologi Digital Indonesia',
+      image: 'https://drive.google.com/uc?id=1A61FO7NFxR5fXbqVN78PSuKVMB9y2Vuc',
+    }
+  ];
+
 
 const AboutUs = () => {
   return (
@@ -37,68 +75,23 @@ const AboutUs = () => {
 					        </Typography>
 				    	</Grid>
 			    </Grid>
-					<Grid container sx={{ spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%', alignItems: 'center', justifyContent: 'center' }}>
-				      <Grid xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop:'20px', marginBottom:'20px' }}>
-				        <Avatar src="/src/assets/img/personalProfile/eka.jpeg" sx={{ height: '270px', width: '270px', marginBottom: '20px' }} />
-				        <Typography variant="h6" gutterBottom fontWeight="bold">
-				          Karuniawan Ekasakti
-				        </Typography>
-				        <Typography variant="body1" gutterBottom>
-				          Front-End Developer
-				        </Typography>
-				        <Typography variant="caption" gutterBottom>
-				          Universitas Gadjah Mada
-				        </Typography>
-				      </Grid>
-				      <Grid xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop:'20px', marginBottom:'20px' }}>
-				        <Avatar src="/src/assets/img/personalProfile/farhan.jpeg" sx={{ height: '270px', width: '270px', marginBottom: '20px' }} />
-				        <Typography variant="h6" gutterBottom fontWeight="bold">
-				          Farhan Maulana Pangestu
-				        </Typography>
-				        <Typography variant="body1" gutterBottom>
-				          Front-End Developer
-				        </Typography>
-				        <Typography variant="caption" gutterBottom>
-				          Universitas Alma Ata
-				        </Typography>
-				      </Grid>
-				      <Grid xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop:'20px', marginBottom:'20px' }}>
-				        <Avatar src="/src/assets/img/personalProfile/ridwan.jpeg" sx={{ height: '270px', width: '270px', marginBottom: '20px' }} />
-				        <Typography variant="h6" gutterBottom fontWeight="bold">
-				          Ridwan Maulana
-				        </Typography>
-				        <Typography variant="body1" gutterBottom>
-				          Front-End Developer
-				        </Typography>
-				        <Typography variant="caption" gutterBottom>
-				          Universitas Alma Ata
-				        </Typography>
-				      </Grid>
-				      <Grid xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop:'20px', marginBottom:'20px' }}>
-				        <Avatar src="/src/assets/img/personalProfile/yahya.jpeg" sx={{ height: '270px', width: '270px', marginBottom: '20px' }} />
-				        <Typography variant="h6" gutterBottom fontWeight="bold">
-				          Yahya Khaliman Indrayana
-				        </Typography>
-				        <Typography variant="body1" gutterBottom>
-				          Back-End Developer
-				        </Typography>
-				        <Typography variant="caption" gutterBottom>
-				          Universitas Amikom Surakarta
-				        </Typography>
-				      </Grid>
-				      <Grid xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop:'20px', marginBottom:'20px' }}>
-				        <Avatar src="/src/assets/img/personalProfile/hana.jpeg" sx={{ height: '270px', width: '270px', marginBottom: '20px' }} />
-				        <Typography variant="h6" gutterBottom fontWeight="bold">
-				          Hana Amanda
-				        </Typography>
-				        <Typography variant="body1" gutterBottom>
-				          UI UX Designer
-				        </Typography>
-				        <Typography variant="caption" gutterBottom>
-				          Universitas Teknologi Digital Indonesia
-				        </Typography>
-				      </Grid>
-				   </Grid>
+          <Grid container sx={{ spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%', alignItems: 'center', justifyContent: 'center' }}>
+             {teamMembers.map((person) => (
+               <Grid key={person.id} xs={12} sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center', textAlign: 'center', marginTop: '20px', marginBottom: '20px' }}>
+                 {/* Menggunakan URL dari Google Drive atau Internet */}
+                 <Avatar src={person.image} sx={{ height: '270px', width: '270px', marginBottom: '20px' }} />
+                 <Typography variant="h6" gutterBottom fontWeight="bold">
+                   {person.name}
+                 </Typography>
+                 <Typography variant="body1" gutterBottom>
+                   {person.role}
+                 </Typography>
+                 <Typography variant="caption" gutterBottom>
+                   {person.university}
+                 </Typography>
+               </Grid>
+             ))}
+          </Grid>
 	        <Grid container>
 							<Grid>
 								<Box>
@@ -130,4 +123,5 @@ const AboutUs = () => {
     </React.Fragment>
   );
 };
+
 export default AboutUs;
