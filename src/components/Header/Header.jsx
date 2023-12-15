@@ -85,7 +85,7 @@ const Header = (props) => {
                         }}
                     >
                         <div className="logo">
-                        <img src='/src/assets/img/WISATA_ID-removebg-preview2.png'/>
+                        <img src='/src/assets/img/WISATA_ID-removebg-preview2.png' title='kembali ke home'/>
                         </div>
                     </Typography>
 

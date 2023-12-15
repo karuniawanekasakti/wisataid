@@ -10,6 +10,8 @@ import MenuItem from '@mui/material/MenuItem';
 import Menu from '@mui/material/Menu';
 import NotificationNull from '../../components/NotificationNull/NotificationNull.jsx';
 import {useState, useEffect} from "react";
+import {useParams} from "react-router-dom";
+import RestartAltIcon from '@mui/icons-material/RestartAlt';
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -28,6 +30,9 @@ const HomePage = () => {
     const [kategoriFilter, setKategoriFilter] = useState(null);
     const [cityFilter, setCityFilter] = useState(null);
 
+    const {city: selectedCity} = useParams();
+    const [cityData, setCityData] = useState([]);
+
     useEffect(() => {
         const getDataWista = async () => {
             try {
@@ -35,16 +40,18 @@ const HomePage = () => {
                 if (!response.ok) {
                     throw new Error(response.statusText);
                 }
-            const data = await response.json();
-            setData(data.data);
-            setFilteredData(data.data);
-            console.log(data);
+                const data = await response.json();
+                setData(data.data);
+                const cityData = data.data.filter(item => item.kota.toLowerCase() === selectedCity.toLowerCase());
+                setCityData(cityData);
+                setFilteredData(cityData);
+                console.log(data);
             } catch (error) {
                 console.log(error);
             }
         };
         getDataWista();
-    }, []);
+    }, [selectedCity]);
 
     const getOptions = (filterName) => {
         switch (filterName) {
@@ -77,7 +84,7 @@ const HomePage = () => {
     };
 
     useEffect(() => {
-        let newData = [...data];
+        let newData = [...cityData];
 
         if (ratingFilter !== null) {
             newData = newData.filter(data => Math.floor(data.rating) === ratingFilter);
@@ -92,7 +99,7 @@ const HomePage = () => {
         }
 
         setFilteredData(newData);
-    }, [ratingFilter, kategoriFilter, cityFilter, data]);
+    }, [ratingFilter, kategoriFilter, cityFilter]);
 
     const filterByRating = (rating) => {
         setRatingFilter(Number(rating));
@@ -105,6 +112,29 @@ const HomePage = () => {
         {name: 'City', action: filterByCity},
     ];
 
+    // reset
+    const resetFilters = async () => {
+        setRatingFilter(null);
+        setKategoriFilter(null);
+        setCityFilter(null);
+        setRatingButtonText('Rating');
+        setKategoriButtonText('Kategori');
+        setCityButtonText('Kabupaten');
+
+        try {
+            const response = await fetch(BASE_URL);
+            if (!response.ok) {
+                throw new Error(response.statusText);
+            }
+            const data = await response.json();
+            setData(data.data);
+            const cityData = data.data.filter(item => item.kota.toLowerCase() === selectedCity.toLowerCase());
+            setCityData(cityData);
+            setFilteredData(cityData);
+        } catch (error) {
+            console.log(error);
+        }
+    };
     const renderCardComponent = (data) => {
         try {
             console.log(data);
@@ -130,10 +160,11 @@ const HomePage = () => {
             return null;
         }
     };
-    return (
+
+    return  (
         <div className='home-page-container'>
             <div className='list'>
-                <h1 className='titleHome'>Pencarian: Yogyakarta</h1>
+                <h1 className='titleHome'>Pencarian: {selectedCity}</h1>
                 <Box className='btnFilter' sx={{
                     display: 'flex',
                     alignItems: 'center',
@@ -142,10 +173,23 @@ const HomePage = () => {
                     marginTop: '-45px',
                     minWidth: '100%'
                 }}>
+                    <ButtonComponent
+                        // variant="outlined"
+                        className='btnFilterr'
+                        endIcon={<RestartAltIcon style={{fontSize:'2rem'}}/>}
+                        // text="Reset"
+                        // size='medium'
+                        style={{
+                            marginLeft: '-30px',
+                            marginRight: '-10px',
+                            backgroundColor:'transparent'
+                        }}
+                        onClick={resetFilters}
+                    />
                     {filters.map((filter, index) => (
                         <div key={index}>
                             <ButtonComponent
-                                variant="outlined" 
+                                variant="outlined"
                                 className='btnFilterr'
                                 text={filter.name === 'Rating' ? ratingButtonText : (filter.name === 'Kategori' ? kategoriButtonText : cityButtonText)}
                                 size='medium'
