@@ -10,7 +10,7 @@ const DataCard = [
         ],
         city: 'Magelang',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'cahaya',
+        kategori: 'Budaya',
         lat: -7.607874,
         lng: 110.203751,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d253088.7515151685!2d110.10832367175644!3d-7.627982112729347!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a8cf009a7d697%3A0xdd34334744dc3cb!2sCandi%20Borobudur!5e0!3m2!1sid!2sid!4v1701866186265!5m2!1sid!2sid'
@@ -26,7 +26,7 @@ const DataCard = [
         ],
         city: 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'pertemuan',
+        kategori: 'Budaya',
         lat: -7.752020,
         lng: 110.491684,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb9e5a0c3b9a5f%3A0x2e7a8cf009a7d697!2sCandi%20Prambanan!5e0!3m2!1sid!2sid!4v1634239178989!5m2!1sid!2sid'
@@ -42,39 +42,7 @@ const DataCard = [
         ],
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'olahan',
-        lat: -7.752020,
-        lng: 110.491684,
-        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb9e5a0c3b9a5f%3A0x2e7a8cf009a7d697!2sCandi%20Prambanan!5e0!3m2!1sid!2sid!4v1634239178989!5m2!1sid!2sid'
-    },
-    {
-        title: 'Candi Sambisari',
-        description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
-        rating: 4.5,
-        image: [
-            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
-            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
-            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
-        ],
-        city : 'Sleman',
-        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'peninggalan',
-        lat: -7.752020,
-        lng: 110.491684,
-        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb9e5a0c3b9a5f%3A0x2e7a8cf009a7d697!2sCandi%20Prambanan!5e0!3m2!1sid!2sid!4v1634239178989!5m2!1sid!2sid'
-    },
-    {
-        title: 'Candi Sambisari',
-        description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
-        rating: 4.5,
-        image: [
-            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
-            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
-            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
-        ],
-        city : 'Sleman',
-        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'cafe',
+        kategori: 'Budaya',
         lat: -7.752020,
         lng: 110.491684,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb9e5a0c3b9a5f%3A0x2e7a8cf009a7d697!2sCandi%20Prambanan!5e0!3m2!1sid!2sid!4v1634239178989!5m2!1sid!2sid'
@@ -93,6 +61,38 @@ const DataCard = [
         kategori: 'Budaya',
         lat: -7.752020,
         lng: 110.491684,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb9e5a0c3b9a5f%3A0x2e7a8cf009a7d697!2sCandi%20Prambanan!5e0!3m2!1sid!2sid!4v1634239178989!5m2!1sid!2sid'
+    },
+    {
+        title: 'Candi Sambisarii',
+        description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
+        rating: 4.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city : 'Sleman',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'Alam',
+        lat: -7.752020,
+        lng: 110.491684,
+        maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xdb9e5a0c3b9a5f%3A0x2e7a8cf009a7d697!2sCandi%20Prambanan!5e0!3m2!1sid!2sid!4v1634239178989!5m2!1sid!2sid'
+    },
+    {
+        title: 'Candi Sambisariu',
+        description: 'Candi Sambisari adalah sebuah candi Hindu yang terletak di Desa Purwomartani, Kalasan, Sleman, Yogyakarta, Indonesia.',
+        rating: 4.5,
+        image: [
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg',
+            'http://jogja.korinatour.co.id/wp-content/uploads/2016/12/Prambanan_Temple-Photo-Credit-to-Nedim-Chaabene.jpg',
+            'http://www.getsready.com/wp-content/uploads/2014/04/borobudur-2.jpg'
+        ],
+        city : 'Sleman',
+        logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
+        kategori: 'Alam',
+        lat: -7.752020,
+        lng: 110.491684,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4'
     },
     {
@@ -106,13 +106,13 @@ const DataCard = [
         ],
         city : 'Sleman',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'Sejarah',
+        kategori: 'Alam',
         lat: -7.752020,
         lng: 110.491684,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis1',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -122,13 +122,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Alam',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis2',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -138,13 +138,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Kuliner',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis3',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -154,13 +154,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Kuliner',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis4',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -170,13 +170,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Kuliner',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis5',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -186,13 +186,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Kuliner',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis6',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -202,13 +202,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Budaya',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis7',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -218,13 +218,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Budaya',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis8',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -234,13 +234,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Alam',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis9',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -250,13 +250,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Alam',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis10',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -266,13 +266,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Kuliner',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis11',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -282,13 +282,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Kuliner',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis12',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -298,13 +298,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Budaya',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis13',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -314,13 +314,13 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Budaya',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'
     },
     {
-        title: 'Pantai Parangtritis',
+        title: 'Pantai Parangtritis14',
         description: 'Pantai Parangtritis adalah sebuah pantai yang terletak di Kecamatan Kretek, Kabupaten Bantul, Yogyakarta, Indonesia.',
         rating: 1.5,
         image: [
@@ -330,7 +330,7 @@ const DataCard = [
         ],
         city: 'Bantul',
         logo: 'https://2.bp.blogspot.com/-7niH8fmBHF4/XDL0PFp1sHI/AAAAAAAABvg/f_MOJEb9lJcxrfUbTTXA5Z5W5mNKXaSEQCLcBGAs/s1600/logo%2Bjateng.png',
-        kategori: 'kapal',
+        kategori: 'Alam',
         lat: -8.006667,
         lng: 110.320556,
         maps: 'https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3951.880547821576!2d110.4916843147759!3d-7.752020094394994!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1'

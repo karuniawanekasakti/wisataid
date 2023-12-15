@@ -1,25 +1,42 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import ButtonGroup from '@mui/material/ButtonGroup';
-import Box from '@mui/material/Box';
+import React, { useState } from 'react';
+import { Button, ButtonGroup as MuiButtonGroup } from '@mui/material';
 
-export default function VariantButtonGroup() {
+const ButtonGroup = ({ onSelectCategory }) => {
+  const [selectedCategory, setSelectedCategory] = useState('Alam');
+
+  const handleCategoryClick = (category) => {
+    setSelectedCategory(category);
+    onSelectCategory(category);
+  };
+
   return (
-    <Box
-      sx={{
-        display: 'flex',
-        flexDirection: 'column',
-        alignItems: 'center',
-        '& > *': {
-          m: 1,
-        },
-      }}
-    >
-      <ButtonGroup variant="outlined" aria-label="outlined button group">
-        <Button>One</Button>
-        <Button>Two</Button>
-        <Button>Three</Button>
-      </ButtonGroup>
-    </Box>
+    <MuiButtonGroup variant="outlined" aria-label="outlined button group">
+      <Button
+        onClick={() => handleCategoryClick('Alam')}
+        sx={{
+          borderTopLeftRadius: '10px',
+          backgroundColor: selectedCategory === 'Alam' ? '#87CEEB' : 'inherit',
+        }}
+      >
+        Alam
+      </Button>
+      <Button
+        onClick={() => handleCategoryClick('Budaya')}
+        sx={{ backgroundColor: selectedCategory === 'Budaya' ? '#87CEEB' : 'inherit' }}
+      >
+        Budaya
+      </Button>
+      <Button
+        onClick={() => handleCategoryClick('Kuliner')}
+        sx={{
+          borderTopRightRadius: '10px',
+          backgroundColor: selectedCategory === 'Kuliner' ? '#87CEEB' : 'inherit',
+        }}
+      >
+        Kuliner
+      </Button>
+    </MuiButtonGroup>
   );
-}
+};
+
+export default ButtonGroup;

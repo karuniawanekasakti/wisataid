@@ -13,7 +13,7 @@ import Box from '@mui/material/Box';
 // import ButtonGroup from '@mui/material/ButtonGroup';
 import { useState, useEffect } from 'react';
 import CarouselImage from "../../components/CarouselImage/CarouselImage.jsx";
-import ButtonGroup from "../../components/Button/ButtonGroup.jsx"
+import ButtonGroup from "../../components/Button/ButtonGroup.jsx";
 import DataCard from "../../utils/DataCard.jsx";
 import './LandingPage.css';
 
@@ -144,9 +144,10 @@ export default function LandingPage() {
             </Paper>            
           </Grid>        
         </Grid>
+        {/*Di bawah ini adalah filter data by kategori*/}
         <Grid container spacing={2}>
-          <Grid item xs={12} marginTop={2} marginBottom={2} textAlign={'center'}>
-            <ButtonGroup onSelectCategory={handleCategorySelect} />
+{/*          <Grid item xs={12} marginTop={2} marginBottom={2} textAlign={'center'}>
+            <VariantButtonGroup/>
           </Grid>
           <Grid item container spacing={2} marginBottom={4} alignItems={'center'}>
             {filteredData.map((item) => (
@@ -157,6 +158,23 @@ export default function LandingPage() {
                   </Paper>
               </Grid>     
             ))}
+          </Grid>*/}
+          <Grid item xs={12} marginTop={2} marginBottom={2} textAlign={'center'}>
+            <div>
+              <ButtonGroup onSelectCategory={handleCategorySelect} />
+
+              <div style={{ display: 'flex', flexWrap: 'wrap', marginTop: '20px' }}>
+                {filteredData.map((item) => (
+                  <Card key={item.id} style={{ width: '300px', margin: '10px' }}>
+                    <img src={item.image[0]} alt={item.title} style={{ width: '100%', height: '200px' }} />
+                    <CardContent>
+                      <Typography variant="h6">{item.title}</Typography>
+                      <Typography>{item.description}</Typography>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
           </Grid> 
         </Grid>                
       </Container>
