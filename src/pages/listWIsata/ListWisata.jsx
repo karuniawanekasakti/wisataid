@@ -1,9 +1,7 @@
-// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import CardComponent from "../../components/Card/CardComponent.jsx";
-// import DataCard from "../../utils/DataCard.jsx";
 import './ListWisata.css'
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
 import MenuItem from '@mui/material/MenuItem';
@@ -12,6 +10,7 @@ import NotificationNull from '../../components/NotificationNull/NotificationNull
 import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
+import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -42,7 +41,7 @@ const HomePage = () => {
                 }
                 const data = await response.json();
                 setData(data.data);
-                const cityData = data.data.filter(item => item.kota.toLowerCase() === selectedCity.toLowerCase());
+                const cityData = data.data.filter(item => item.provinsi.toLowerCase() === selectedCity.toLowerCase());
                 setCityData(cityData);
                 setFilteredData(cityData);
                 console.log(data);
@@ -99,7 +98,7 @@ const HomePage = () => {
         }
 
         setFilteredData(newData);
-    }, [ratingFilter, kategoriFilter, cityFilter]);
+    }, [ratingFilter, kategoriFilter, cityFilter, cityData]);
 
     const filterByRating = (rating) => {
         setRatingFilter(Number(rating));
@@ -120,6 +119,7 @@ const HomePage = () => {
         setRatingButtonText('Rating');
         setKategoriButtonText('Kategori');
         setCityButtonText('Kabupaten');
+        setFilteredData(cityData);
 
         try {
             const response = await fetch(BASE_URL);
@@ -128,7 +128,7 @@ const HomePage = () => {
             }
             const data = await response.json();
             setData(data.data);
-            const cityData = data.data.filter(item => item.kota.toLowerCase() === selectedCity.toLowerCase());
+            const cityData = data.data.filter(item => item.provinsi.toLowerCase() === selectedCity.toLowerCase());
             setCityData(cityData);
             setFilteredData(cityData);
         } catch (error) {
@@ -176,7 +176,7 @@ const HomePage = () => {
                     <ButtonComponent
                         // variant="outlined"
                         className='btnFilterr'
-                        endIcon={<RestartAltIcon style={{fontSize:'2rem'}}/>}
+                        endIcon={<RestartAltIcon className='btnFilterrr' style={{fontSize:'2rem'}}/>}
                         // text="Reset"
                         // size='medium'
                         style={{
@@ -222,19 +222,25 @@ const HomePage = () => {
                     ))}
                 </Box>
                 <Grid container spacing={2.5}>
-                    {filteredData.length > 0 ? (
-                        filteredData.map((data, index) => (
-                            <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
-                                <Box minWidth={300}>
-                                    {renderCardComponent(data)}
-                                </Box>
-                            </Grid>
-                        ))
-                    ) : (
-                        <Grid item xs={12}>
-                            <NotificationNull className='undrawNotif'/>
-                        </Grid>
-                    )}
+                    <TransitionGroup component={null}>
+                        {filteredData.length > 0 ? (
+                            filteredData.map((data, index) => (
+                                <CSSTransition key={index} timeout={80} classNames="item">
+                                    <Grid item xs={12} sm={6} md={4} lg={3}>
+                                        <Box minWidth={300}>
+                                            {renderCardComponent(data)}
+                                        </Box>
+                                    </Grid>
+                                </CSSTransition>
+                            ))
+                        ) : (
+                            <CSSTransition timeout={1500} classNames="item">
+                                <Grid item xs={12}>
+                                    <NotificationNull className='undrawNotif'/>
+                                </Grid>
+                            </CSSTransition>
+                        )}
+                    </TransitionGroup>
                 </Grid>
             </div>
         </div>

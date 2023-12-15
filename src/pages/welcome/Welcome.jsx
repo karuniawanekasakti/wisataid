@@ -11,10 +11,9 @@ import './Welcome.css'
 import { useEffect } from 'react';
 
 const Welcome = () => {
-  const BASE_URL = 'http://47.128.228.117:4000/wisata/all/kota';
+  const BASE_URL = 'http://47.128.228.117:4000/wisata';
   const [selectedCity, setSelectedCity] = React.useState('');
   const [city, setCity] = React.useState([]);
-
 
   useEffect(()=> {
     const getWisataCity = async () => {
@@ -24,7 +23,12 @@ const Welcome = () => {
           throw new Error(response.statusText);
         }
         const data = await response.json();
-        setCity(data.data);
+        // Filter out duplicate provinces and map to the format needed for SelectComponent
+        const provinces = [...new Set(data.data.map(item => item.provinsi))].map(province => ({
+          label: province,
+          value: province,
+        }));
+        setCity(provinces);
         console.log(data);
       } catch (error) {
         console.log(error);
@@ -49,10 +53,10 @@ const Welcome = () => {
                 variant="outlined"
                 size="medium"
                 label="City"
-                placeholder="Pilih Kota tujuanmu"
+                placeholder="Pilih Provinsi Mu"
                 menuItems={Array.isArray(city) ? city.map((item) => ({
-                  label: item.kota,
-                  value: item.kota,
+                  label: item.label,
+                  value: item.value,
                 })) : []}
               />
               <div className='button'>

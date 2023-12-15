@@ -85,12 +85,15 @@ const Header = (props) => {
                         }}
                     >
                         <div className="logo">
-                        <img src='/src/assets/img/WISATA_ID-removebg-preview2.png' title='kembali ke home'/>
+                        <img src='/src/assets/img/WISATA_ID__4_-removebg-preview.png' title='WisataId'/>
                         </div>
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
-                            <HamburgerComponent/>
+                        <HamburgerComponent/>
+                        <div className="logoHp">
+                            <img src='/src/assets/img/WISATA_ID__4_-removebg-preview.png' title='WisataId'/>
+                        </div>
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {navLinks.map((link) => (
