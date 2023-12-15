@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import * as React from 'react';
 import {useParams} from "react-router-dom";
 import {Box, Typography, Container, Paper} from "@mui/material";
@@ -44,7 +45,7 @@ export default function DetailPage() {
                         data-testid="back-button"
                         text='Kembali'
                         size="small"
-                        to={`/list-wisata/${data.kota}`}
+                        to={`/list-wisata/${data.provinsi}`}
                         variant="outlined"
                     />
                 </Box>

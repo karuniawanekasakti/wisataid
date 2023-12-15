@@ -30,7 +30,7 @@ export default function SelectComponent(props) {
   return (
     <div>
       <FormControl sx={{ width: '500px' }} variant={props.variant} size={props.size}>
-        <InputLabel htmlFor={props.htmlFor}>Pilih Kota Tujuanmu</InputLabel>
+        <InputLabel htmlFor={props.htmlFor}>Pilih Provinsi tujuan mu</InputLabel>
         <Select
           id={props.id}
           value={props.value}
@@ -39,15 +39,15 @@ export default function SelectComponent(props) {
           MenuProps={{
             PaperProps: {
               style: {
-                maxHeight: 200, // Set your desired max height
-                overflowY: 'auto', // Enable scrolling
+                maxHeight: 200,
+                overflowY: 'auto',
               },
             },
           }}
         >
           <MenuItem value="" >{props.placeholder}</MenuItem>
-          {props.menuItems.map((item) => (
-            <MenuItem key={item.value} value={item.value}>
+          {props.menuItems.map((item, index) => (
+            <MenuItem key={index} value={item.value}>
               {item.label}
             </MenuItem>
           ))}

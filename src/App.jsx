@@ -17,7 +17,7 @@ function App() {
         setLoading(true);
         setTimeout(() => {
             setLoading(false);
-        }, 5000);
+        }, 2700);
     }, []);
     // const toogleColorMode = () => {
     //     setMode(mode === 'dark' ? 'light' : 'dark');

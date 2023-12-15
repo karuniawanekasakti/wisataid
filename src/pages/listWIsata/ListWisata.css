@@ -8,8 +8,8 @@
   display: flex;
 }
 h1{
-  margin-left: 8px;
-  font-size: 30px !important;
+  margin-left: 6px;
+  font-size: 29px !important;
   margin-bottom: 6px !important;
 }
 /*.filter {*/
@@ -24,6 +24,16 @@ h1{
     opacity: 1;
     transition: opacity 300ms linear;
 }
+
+/*undraw*/
+.item-enter {
+    opacity: 0;
+}
+
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
+}
 /*responsive 320*/
 @media screen and (max-width: 320px) {
   .titleHome{
@@ -33,7 +43,16 @@ h1{
 /*responsvie 352-387*/
 @media screen and (min-width: 352px) and (max-width: 387px) {
   .titleHome{
-      font-size: 26px !important; ;
+      font-size: 20px !important; ;
+  }
+}
+/*responsive 365 to btnfilter*/
+@media screen and (max-width: 365px) {
+  .btnFilterr{
+      font-size: 11px !important;
+  }
+    .btnFilterrr{
+      font-size: 19px !important;
   }
 }
 /*responsive 465*/
