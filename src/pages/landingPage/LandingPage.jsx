@@ -12,6 +12,7 @@ import Box from '@mui/material/Box';
 // import Button from '@mui/material/Button';
 // import ButtonGroup from '@mui/material/ButtonGroup';
 import { useState, useEffect } from 'react';
+import { useRef } from 'react';
 import CarouselImage from "../../components/CarouselImage/CarouselImage.jsx";
 import ButtonGroup from "../../components/Button/ButtonGroup.jsx";
 import DataCard from "../../utils/DataCard.jsx";
@@ -28,6 +29,9 @@ const sortedDataCard = [...DataCard].sort((a, b) => b.rating - a.rating);
 const topRatedData = sortedDataCard.slice(0, 3);
 
 export default function LandingPage() {
+// Di dalam komponen fungsional
+    const mainSectionRef = useRef(null);
+
     const [selectedCategory, setSelectedCategory] = useState('Alam');
 
     const handleCategorySelect = (category) => {
@@ -100,8 +104,23 @@ export default function LandingPage() {
               <Typography variant="body1" gutterBottom sx={{ textAlign: 'left' }}>
                 Dengan koleksi destinasi wisata yang sangat beragam, kami mengundang Anda untuk menjelajahi keindahan alam, mengenal budaya baru, dan membuat kenangan tak terlupakan di setiap langkah perjalanan Anda.
               </Typography>
-              <h3>Check it Out!!!</h3>
-              <KeyboardArrowDownOutlinedIcon sx={{ fontSize: '3.5rem' }} />
+                <h3>
+                    Check it Out!!!
+                </h3>
+                  <a
+                    href="#"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      mainSectionRef.current.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start',
+                      });
+                    }}
+                    className='chekItOutLink'
+                    color="action" sx={{ '&:hover': { color: 'primary.dark' } }}
+                  >
+                    <KeyboardArrowDownOutlinedIcon sx={{ fontSize: '3.5rem' }} />
+                  </a>                
             </DemoPaper>
           </Grid>
           <Grid item xs={12} md={12} lg={12}>
@@ -144,10 +163,10 @@ export default function LandingPage() {
             </Paper>            
           </Grid>
         {/*Di bawah ini adalah filter data by kategori*/}
-          <Grid item xs={12} sm={12} md={12} lg={12} style={{textAlign: 'center', marginTop: '15px'}}>
-              <ButtonGroup onSelectCategory={handleCategorySelect} />
+          <Grid item xs={12} sm={12} md={12} lg={12} style={{textAlign: 'center', marginTop: '15px'}}  ref={mainSectionRef} >
+              <ButtonGroup onSelectCategory={handleCategorySelect}/>
           </Grid>
-          <Grid item container textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <Grid item container textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', marginBottom: '100px' }}>
                 {filteredData.map((item) => (
                   <Grid item 
                   key={item.id} style={{ width: '300px', margin: '10px' }}>

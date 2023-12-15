@@ -30,10 +30,3 @@
   overflow: hidden; /* Menyembunyikan overflow agar efek shine terlihat */
   background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(25, 118, 210, 0.3), rgba(255, 255, 255, 0.1)); /* Warna efek shine */
 }
-
-
-@media (min-width: 500px){
-	.box-konten1 {
-		margin-top: 500px;
-  	}
-}

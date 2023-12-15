@@ -78,13 +78,13 @@ const AboutUs = () => {
 					        	Tentang Kami
 					        </Typography>
 			        </Grid>		
-			        <Grid xs={12}>	        
+			        <Grid xs={12} marginTop="15px">	        
 					       	<Typography variant="body1" gutterBottom sx={{textAlign:'left',}}>
 					        	Wisata ID merupakan sebuah platfrom yang menyediakan informasi seputar pariwisata di Indonesia. Tentunya dengan berbagai fitur yang memudahkan pengguna untuk mencari wisata yang diinginkan. Anda bisa mencari wisata dengan klasifikasi wisata sesuai dengan yang anda minta berdasarkan rating, kategori maupun region lokasi wisata yang hendak dituju.
 					        </Typography>
 				    	</Grid>
 			    </Grid>
-			    <Grid container sx={{spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%', textAlign: 'center', marginTop:'20px'}}>
+			    <Grid container sx={{spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%', textAlign: 'left', marginTop:'20px'}}>
 			        <Grid xs={12}>			        
 					       	<Typography variant="h4" gutterBottom fontWeight="bold">
 					        	Our Team Members
@@ -118,28 +118,24 @@ const AboutUs = () => {
 									</Button>
 					    </div>
 					  </div>
-					{/*  <KeyboardArrowLeft onClick={prevSlide} color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>
-					  <KeyboardArrowRight onClick={nextSlide} color="action" style={{fontSize:'3rem'}}  sx={{ '&:hover': { color: 'primary.dark' } }}/>*/}
-{/*					  <button onClick={prevSlide}>Previous</button>
-					  <button onClick={nextSlide}>Next</button>*/}
 					</Grid>
-	        <Grid container>
-							<Grid>
+	        <Grid container sx={{ spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%', justifyContent: 'left', textAlign: 'left', marginBottom: '25px', marginTop: '30px' }}>
+							<Grid item xs={12} sm={12} md={12} lg={12}>
 								<Box>
-						      <ul style={{ listStyleType: 'none', padding: 5 }}>
-						        <li style={{ marginBottom: '15px' }}>
+						      <ul style={{ listStyleType: 'none', padding: 5}}>
+						        <li style={{ display: 'inline-block', marginRight: '15px' }}>
 						          <Stack spacing={2} direction="row" alignItems="center">
 						            <LocationOnIcon />
 						            <Typography>Daerah Istimewa Yogyakarta</Typography>
 						          </Stack>
 						        </li>
-						        <li style={{ marginBottom: '15px' }}>
+						        <li style={{ display: 'inline-block', marginRight: '15px' }}>
 						          <Stack spacing={2} direction="row" alignItems="center">
 						            <MailIcon />
 						            <Typography>helpdesk@explorewisata.id</Typography>
 						          </Stack>
 						        </li>
-						        <li style={{ marginBottom: '15px' }}>
+						        <li style={{ display: 'inline-block', marginRight: '15px' }}>
 						          <Stack spacing={2} direction="row" alignItems="center">
 						            <LanguageIcon />
 						            <Typography>wisata.id</Typography>
@@ -149,6 +145,21 @@ const AboutUs = () => {
 						    </Box>
 			        </Grid>	
 	        </Grid>
+			    <Grid container sx={{ spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%', justifyContent: 'left', marginBottom: '100px', textAlign: 'left' }}>
+			    		<Grid item xs={12} sm={12} md={12} lg={12}>
+					      <Typography variant="caption" gutterBottom>
+					        	POWERED BY:					      		
+					      </Typography>			    			
+			    		</Grid>
+					    <Grid item xs={12} sm={12} md={12} lg={12}>
+					    	<img src="https://drive.google.com/uc?id=1exBksZYF3eBnl1_Ho-Ifzw5-3hZLkLD_" alt=""
+					    	style={{maxHeight: '50px', width: 'auto', display: 'inline-block', marginRight: '10px'}}
+					    	/>
+					    	<img src="https://drive.google.com/uc?id=1FAPeB66r5M2Z0HnBrGoPvOn41VjzWv6q" alt=""
+					    	style={{maxHeight: '50px', width: 'auto', display: 'inline-block', marginLeft: '10px'}}
+					    	/>
+					    </Grid>			    
+			    </Grid>
         </Box>
       </Container>
     </React.Fragment>
