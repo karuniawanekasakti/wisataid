@@ -35,7 +35,7 @@ import './AboutUs.css';
       name: 'Ridwan Maulana',
       role: 'Front-End Developer',
       university: 'Universitas Alma Ata',
-      image: 'https://drive.google.com/uc?id=1s4qtA-oBm2vnc0PI-YTver1oWUAQtX8z',
+      image: 'https://drive.google.com/uc?id=1dkc0DusIOqXZPqClSOB73p9lcPhJBsrQ',
     },
     {
       id: 4,

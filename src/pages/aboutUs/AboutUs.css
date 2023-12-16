@@ -8,25 +8,12 @@
   transition: transform 0.5s ease-in-out;
 }
 
-/*.carousel-item {
-  background-color: none;
-  flex: 0 0 100%;
-  border-radius: 10px;
-}
-
 
 .carousel-item {
-  border: 2px solid #1976d2;
+  background-color: none;
+  flex: 0 0 100%;
+  border: 2px solid #1976d2; 
   border-radius: 10px; 
   overflow: hidden; 
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.5), transparent, rgba(255, 255, 255, 0.5));
-}
-*/
-.carousel-item {
-  background-color: none;
-  flex: 0 0 100%;
-  border: 2px solid #1976d2; /* Warna border biru */
-  border-radius: 10px; /* Sudut border */
-  overflow: hidden; /* Menyembunyikan overflow agar efek shine terlihat */
-  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(25, 118, 210, 0.3), rgba(255, 255, 255, 0.1)); /* Warna efek shine */
+  background: linear-gradient(45deg, rgba(255, 255, 255, 0.1), rgba(25, 118, 210, 0.3), rgba(255, 255, 255, 0.1));
 }
