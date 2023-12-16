@@ -94,7 +94,7 @@ const Header = (props) => {
                         {theme.palette.mode === 'dark' ? <Brightness7Icon/> : <Brightness4Icon/>}
                     </IconButton>
                     <Box>
-                        <Search style={{backgroundColor: 'transparent', width: '100%'}}>
+                        <Search style={{backgroundColor: 'transparent', width: '100%',padding:'5px'}}>
                             <SearchIconWrapper>
                                 {/*<SearchIcon/>*/}
                             </SearchIconWrapper>
