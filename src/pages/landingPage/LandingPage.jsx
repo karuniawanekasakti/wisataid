@@ -20,7 +20,7 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const IMAGE_URL = 'http://47.128.228.117:4000/images/'; // Tambahkan baris ini
+const IMAGE_URL = 'http://47.128.228.117:4000/images/';
 
 export default function LandingPage() {
   const mainSectionRef = useRef(null);
@@ -152,7 +152,7 @@ export default function LandingPage() {
               </Typography>
             </DemoPaper>
           </Grid>
-          <Grid item container spacing={2} justifyContent={'center'}>
+          <Grid item container spacing={2} textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             {apiData.slice(0, 3).map((item) => (
               <Grid item key={item.id} xs={12} sm={4} md={4} lg={4}>
                 <Paper sx={{ borderRadius: '10px', backgroundColor: 'none', boxShadow: '0px 4px 8px rgba(0, 0, 0, 0.5)', margin: '10px' }}>
