@@ -3,7 +3,7 @@
 }
 
 .nav {
-  z-index: 2; /* Adjusted z-index */
+  z-index: 222; /* Adjusted z-index */
   position: fixed;
   top: 0;
   width: 100%;

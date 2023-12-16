@@ -2,11 +2,7 @@ const navLinks = [
   
   {
     name: 'Home',
-    path: '/'
-  },
-  {
-    name: 'List Wisata',
-    path: '/list-wisata'
+    path: '/home'
   },
   {
     name: 'Maps',
@@ -15,6 +11,10 @@ const navLinks = [
   {
     name: 'Contribution',
     path: '/contribution'
+  },
+  {
+    name: 'About',
+    path: '/AboutUs'
   },
 
 ]

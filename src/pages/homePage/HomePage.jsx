@@ -22,7 +22,7 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
 
 const IMAGE_URL = 'http://47.128.228.117:4000/images/';
 
-export default function LandingPage() {
+export default function HomePage() {
   const mainSectionRef = useRef(null);
   const [selectedCategory, setSelectedCategory] = useState('Alam');
   const [apiData, setApiData] = useState([]);

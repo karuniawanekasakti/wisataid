@@ -1,51 +1,82 @@
 .list {
-    margin-top: 5vh;
-    margin-bottom: 10vh;
-    padding: 20px;
-    width: 100%;
+  margin-top: 5vh;
+  margin-bottom: 10vh;
+  padding: 20px;
+  width: 100%;
 }
 .home-page-container {
-    display: flex;
+  display: flex;
 }
 h1{
-    margin-left: 8px;
-    font-size: 30px !important;
-    margin-bottom: 6px !important;
+  margin-left: 6px;
+  font-size: 29px !important;
+  margin-bottom: 6px !important;
 }
-.filter {
-    margin-bottom: 16px !important;
+/*.filter {*/
+/*  margin-bottom: 16px !important;*/
+/*}*/
+.fade-enter {
+    opacity: 0;
+    z-index: 1;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: opacity 300ms linear;
+}
+
+/*undraw*/
+.item-enter {
+    opacity: 0;
+}
+
+.item-enter-active {
+    opacity: 1;
+    transition: opacity 500ms;
 }
 /*responsive 320*/
 @media screen and (max-width: 320px) {
-    .titleHome{
-        font-size: 20px !important; ;
-    }
+  .titleHome{
+      font-size: 20px !important; ;
+  }
 }
 /*responsvie 352-387*/
 @media screen and (min-width: 352px) and (max-width: 387px) {
-    .titleHome{
-        font-size: 26px !important; ;
-    }
+  .titleHome{
+      font-size: 20px !important; ;
+  }
+}
+/*responsive 365 to btnfilter*/
+@media screen and (max-width: 365px) {
+  .btnFilterr{
+      font-size: 11px !important;
+  }
+    .btnFilterrr{
+      font-size: 19px !important;
+  }
 }
 /*responsive 465*/
 @media screen and (max-width: 465px) {
-    .titleHome{
-        margin-top: 800px !important;
-    }
-    .filter{
-        top: 23px !important;
-    }
+  .titleHome{
+      margin-top: 800px !important;
+  }
+  .filter{
+      top: 23px !important;
+  }
+  .btnFilter{
+      display: grid;
+  }
 }
 @media screen and (max-width: 1200px) {
-    .titleHome {
-        margin-top: 15px !important;
-    }
+  .titleHome {
+      margin-top: 15px !important;
+  }
 }
-@media screen and (max-width: 680px) {
-    .btnFilter {
-        margin-top: 0 !important;
-        justify-content: normal !important;
-    }
+@media screen and (max-width: 880px) {
+  .btnFilter {
+      margin-top: 0 !important;
+      justify-content: normal !important;
+  }
 }
 /*.undrawNotif img {*/
 /*    width: 500px;*/
