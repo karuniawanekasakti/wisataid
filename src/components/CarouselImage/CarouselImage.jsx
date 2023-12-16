@@ -14,7 +14,7 @@ export default function CarouselImage({ steps, activeStep, handleNext, handleBac
         <MobileStepper
             className="mobile-stepper"
             // variant="dots"
-            // steps={steps}
+            steps={steps}
             position="static"
             activeStep={activeStep}
             sx={{
