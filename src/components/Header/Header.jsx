@@ -19,6 +19,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 import {useTheme} from '@mui/material/styles';
 import HamburgerComponent from "../Hamburger/HamburgerComponent.jsx";
 import SearchComponent from "../SearchBar/SearchComponent.jsx";
+import image from "../../assets/img/WISATA_ID__5_-removebg-preview.png";
 
 const Header = (props) => {
     const theme = useTheme();
@@ -68,14 +69,14 @@ const Header = (props) => {
                         }}
                     >
                         <div className="logo">
-                            <img src='/src/assets/img/WISATA_ID__5_-removebg-preview.png' title='WisataId'/>
+                            <img src={image} title='WisataId'/>
                         </div>
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <HamburgerComponent/>
                         <div className="logoHp">
-                            <img src='/src/assets/img/WISATA_ID__5_-removebg-preview.png' title='WisataId'/>
+                            <img src={image} title='WisataId'/>
                         </div>
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
