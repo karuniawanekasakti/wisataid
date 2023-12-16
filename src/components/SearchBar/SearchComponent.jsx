@@ -55,6 +55,7 @@ export default function SearchComponent(props) {
             className={props.className}
             sx={{
                 width: 300,
+                height: 58,
                 '& .MuiOutlinedInput-root': {
                     borderRadius: '80px',
                     // backgroundColor: 'transparent',

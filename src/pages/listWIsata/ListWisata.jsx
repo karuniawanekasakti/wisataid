@@ -60,7 +60,7 @@ const HomePage = () => {
                 setTimeout(() => {
                 setIsLoading(false);
                     console.log('undrawfingi');
-                },1000);
+                },2700);
             }
         };
         getDataWista();
