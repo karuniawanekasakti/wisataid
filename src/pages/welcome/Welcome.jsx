@@ -10,6 +10,7 @@ import HeroImage from '../../assets/img/background 1.png'
 import './Welcome.css'
 import { useEffect } from 'react';
 
+
 const Welcome = () => {
   const BASE_URL = 'http://47.128.228.117:4000/wisata';
   const [selectedCity, setSelectedCity] = React.useState('');
@@ -29,9 +30,9 @@ const Welcome = () => {
           value: province,
         }));
         setCity(provinces);
-        console.log(data);
+        // console.log(data);
       } catch (error) {
-        console.log(error);
+        // console.log(error);
       }
     };
     getWisataCity();

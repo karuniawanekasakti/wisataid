@@ -53,7 +53,7 @@ export default function DetailPage() {
                     <Typography className='titleDetail' variant="h4" gutterBottom>
                         {data.nama_wisata}
                         <span
-                        style={{color: 'gray', fontSize: '1.2rem', fontStyle: 'italic'}}> {data.kota}
+                            style={{color: 'gray', fontSize: '1.2rem', fontStyle: 'italic'}}> {data.kota}
                         </span>
                     </Typography>
                 </Box>
@@ -77,7 +77,7 @@ export default function DetailPage() {
                             <div className='mapIcon'>
                                 <iframe
                                     src={`https://maps.google.com/maps?q=${data.latitude},${data.longtitude}&z=15&output=embed`}
-                                    width="600" height="450" style={{border:0}} allowFullScreen="" loading="lazy"
+                                    width="600" height="450" style={{border: 0}} allowFullScreen="" loading="lazy"
                                     referrerPolicy="no-referrer-when-downgrade"></iframe>
                             </div>
                         </Grid>
