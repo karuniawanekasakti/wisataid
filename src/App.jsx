@@ -1,18 +1,25 @@
 import {Routes, Route} from 'react-router-dom'
 import Welcome from './pages/welcome/Welcome'
-import AboutUs from './pages/aboutUs/AboutUs.jsx'
-import ListWisata from './pages/homePage/ListWisata.jsx';
-import LandingPage from './pages/landingPage/LandingPage.jsx';
+import ListWisata from './pages/listWIsata/ListWisata'
+import HomePage from './pages/homePage/HomePage';
 import DetailPage from './pages/Detail/DetailPage';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../src/components/Header/Header';
-import React from 'react';
-
+import React, {useState, useEffect} from 'react';
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import AboutUs from './pages/aboutUs/AboutUs'
 
 function App() {
     const [mode, setMode] = React.useState(localStorage.getItem('mode') || 'dark');
+    const [loading, setLoading] = useState(false);
 
+    useEffect(() => {
+        setLoading(true);
+        setTimeout(() => {
+            setLoading(false);
+        }, 2700);
+    }, []);
     // const toogleColorMode = () => {
     //     setMode(mode === 'dark' ? 'light' : 'dark');
     //     console.log(mode)
@@ -28,30 +35,49 @@ function App() {
                 palette: {
                     mode,
                     button: {
-                        main: mode === 'light' ? '#ffffff' : '#000000', //tambah ini supaya tidak ribet atur warna button
+                        main: mode === 'light' ? '#000000' : '#ffffff', //tambah ini supaya tidak ribet atur warna button
                     },
                 },
             }),
         [mode],
     );
+    // const loaderColor = mode === 'dark' ? '#000000' : '#ffffff';
+    // const backgroundColor = mode === 'dark' ? '#000000' : '#ffffff';
+    //
+    // if (loading) {
+    //     document.body.style.backgroundColor = loaderColor;
+    // } else {
+    //     document.body.style.backgroundColor = backgroundColor;
+    // }
 
     return (
-        <>
-            <ThemeProvider theme={theme}>
-                <CssBaseline/>
-                <div className='nav'>
-                    <Header className='navBar' toogleColorMode={toogleColorMode}/>
-                </div>
-                <Routes>
-                    <Route path="/" Component={Welcome}/>
-                    <Route path="AboutUs" Component={AboutUs}/>
-                    <Route path="/list-wisata" Component={ListWisata}/>
-                    <Route path="/LandingPage" Component={LandingPage}/>
-                    <Route path="/detail/:id" Component={DetailPage}/>
-                </Routes>
-            </ThemeProvider>
-        </>
+        <ThemeProvider theme={theme}>
+            <CssBaseline/>
+            <div className='nav'>
+                <Header className='navBar' toogleColorMode={toogleColorMode}/>
+            </div>
+            {
+                loading ? (
+                    <ClimbingBoxLoader
+                        color={mode === 'light' ? '#006aec' : '#ffffff'}
+                        loading={loading}
+                        size={20}
+                        style={{width: '100%',height:'100vh', transform: 'translate(-50%, -50%)'}}
+                    />
+                ) : (
+                    <Routes>
+                        <Route path="/" Component={Welcome}/>
+                        <Route path="/list-wisata/:city" Component={ListWisata}/>
+                        <Route path="/home" Component={HomePage}/>
+                        <Route path="/detail/:id" Component={DetailPage}/>
+                        <Route path="about-us" Component={AboutUs}/>
+                    </Routes>
+                )
+            }
+        </ThemeProvider>
     )
 }
+
+
 
 export default App
