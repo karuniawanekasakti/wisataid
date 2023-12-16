@@ -11,13 +11,15 @@ import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import {CSSTransition, TransitionGroup} from "react-transition-group";
+import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
+import {useTheme} from '@mui/material/styles';
 
 const HomePage = () => {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [anchorEl, setAnchorEl] = useState({rating: null, kategori: null, kota: null});
     const BASE_URL = 'http://47.128.228.117:4000/wisata';
-    const IMAGE_URL =  `http://47.128.228.117:4000/images/`;
+    const IMAGE_URL = `http://47.128.228.117:4000/images/`;
     const ratingOptions = [1, 2, 3, 4, 5];
     const kategoriOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kategori))] : [];
     const kotaOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kota))] : [];
@@ -32,8 +34,14 @@ const HomePage = () => {
     const {city: selectedCity} = useParams();
     const [cityData, setCityData] = useState([]);
 
+
+    const [isLoading, setIsLoading] = useState(false);
+    const theme = useTheme();
+
     useEffect(() => {
         const getDataWista = async () => {
+            setIsLoading(true);
+            console.log('undraw')
             try {
                 const response = await fetch(BASE_URL);
                 if (!response.ok) {
@@ -44,9 +52,15 @@ const HomePage = () => {
                 const cityData = data.data.filter(item => item.provinsi.toLowerCase() === selectedCity.toLowerCase());
                 setCityData(cityData);
                 setFilteredData(cityData);
+                // setIsDataLoaded(true);
                 console.log(data);
             } catch (error) {
                 console.log(error);
+            } finally {
+                setTimeout(() => {
+                setIsLoading(false);
+                    console.log('undrawfingi');
+                },1000);
             }
         };
         getDataWista();
@@ -161,7 +175,7 @@ const HomePage = () => {
         }
     };
 
-    return  (
+    return (
         <div className='home-page-container'>
             <div className='list'>
                 <h1 className='titleHome'>Pencarian: {selectedCity}</h1>
@@ -176,13 +190,13 @@ const HomePage = () => {
                     <ButtonComponent
                         // variant="outlined"
                         className='btnFilterr'
-                        endIcon={<RestartAltIcon className='btnFilterrr' style={{fontSize:'2rem'}}/>}
+                        endIcon={<RestartAltIcon className='btnFilterrr' style={{fontSize: '2rem'}}/>}
                         // text="Reset"
                         // size='medium'
                         style={{
                             marginLeft: '-30px',
                             marginRight: '-10px',
-                            backgroundColor:'transparent'
+                            backgroundColor: 'transparent'
                         }}
                         onClick={resetFilters}
                     />
@@ -221,9 +235,23 @@ const HomePage = () => {
                         </div>
                     ))}
                 </Box>
-                <Grid container spacing={2.5}>
+                <Grid container spacing={2.5} key={isLoading ? 'loading' : 'loaded'}>
                     <TransitionGroup component={null}>
-                        {filteredData.length > 0 ? (
+                        {isLoading ? (
+                            <div style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                height: '100vh',
+                                width: '100%',
+                            }}>
+                                <ClimbingBoxLoader
+                                    color={theme.palette.mode === 'light' ? '#006aec' : '#ffffff'}
+                                    loading={isLoading}
+                                    size={20}
+                                />
+                            </div>
+                        ) : filteredData.length > 0 ? (
                             filteredData.map((data, index) => (
                                 <CSSTransition key={index} timeout={80} classNames="item">
                                     <Grid item xs={12} sm={6} md={4} lg={3}>
@@ -233,13 +261,13 @@ const HomePage = () => {
                                     </Grid>
                                 </CSSTransition>
                             ))
-                        ) : (
+                        ) : !isLoading && filteredData.length === 0 ? (
                             <CSSTransition timeout={1500} classNames="item">
                                 <Grid item xs={12}>
                                     <NotificationNull className='undrawNotif'/>
                                 </Grid>
                             </CSSTransition>
-                        )}
+                        ) : null}
                     </TransitionGroup>
                 </Grid>
             </div>
