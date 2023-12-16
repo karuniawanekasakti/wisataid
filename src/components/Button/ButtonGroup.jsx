@@ -4,7 +4,6 @@ import { Button, ButtonGroup as MuiButtonGroup } from '@mui/material';
 const ButtonGroup = ({ onSelectCategory }) => {
   const [selectedCategory, setSelectedCategory] = useState('Kebudayaan');
 
-
   const handleCategoryClick = (category) => {
     setSelectedCategory(category);
     onSelectCategory(category);
