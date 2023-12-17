@@ -22,26 +22,7 @@ export default function Login() {
     const [isFailed, setIsFailed] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
 
-    // const [users] = useState([
-    //     {email: 'admin', password: 'password1'},
-    //     {email: 'user2@example.com', password: 'password2'},
-    // ]);
-    // // const handleSubmit = (event) => {
-    // //     event.preventDefault();
-    // //     const data = new FormData(event.currentTarget);
-    // //
-    // //     const email = data.get('email');
-    // //     const password = data.get('password');
-    // //
-    // //     const user = users.find(user => user.email === email && user.password === password);
-    // //
-    // //     if (user) {
-    // //         setIsSuccess(true);
-    // //         console.log('login',user)
-    // //     } else {
-    // //         setIsFailed(true);
-    // //     }
-    // // }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
