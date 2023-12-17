@@ -13,6 +13,7 @@ import InputBase from '@mui/material/InputBase';
 import SearchIcon from '@mui/icons-material/Search';
 import navLinks from "../../utils/NavLinks";
 import './Header.css';
+import Logo from '../../assets/img/WISATA_ID__4_-removebg-preview.png';
 
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
@@ -85,14 +86,14 @@ const Header = (props) => {
                         }}
                     >
                         <div className="logo">
-                        <img src='/src/assets/img/WISATA_ID__4_-removebg-preview.png' title='WisataId'/>
+                        <img src={Logo} title='WisataId'/>
                         </div>
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <HamburgerComponent/>
                         <div className="logoHp">
-                            <img src='/src/assets/img/WISATA_ID__4_-removebg-preview.png' title='WisataId'/>
+                            <img src={Logo} title='WisataId'/>
                         </div>
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>

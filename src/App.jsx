@@ -1,8 +1,12 @@
 import {Routes, Route} from 'react-router-dom'
+
 import Welcome from './pages/welcome/Welcome'
 import ListWisata from './pages/listWIsata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
 import DetailPage from './pages/Detail/DetailPage';
+import Contribution from './pages/Contribution/Contribution'
+
+
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../src/components/Header/Header';
@@ -69,6 +73,7 @@ function App() {
                         <Route path="/list-wisata/:city" Component={ListWisata}/>
                         <Route path="/home" Component={HomePage}/>
                         <Route path="/detail/:id" Component={DetailPage}/>
+                        <Route path="/contribution" Component={Contribution}/>
                     </Routes>
                 )
             }
