@@ -210,7 +210,7 @@ const HomePage = () => {
                                 style={{
                                     marginLeft: 'auto',
                                     marginRight: '10px',
-                                    color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5'
+                                    color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5' // Ubah warna teks berdasarkan mode
                                 }}
                                 onClick={(event) => handleOpen(filter.name, event)}
                             />
