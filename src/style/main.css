@@ -1,0 +1,17 @@
+* {
+  font-family: poppins, sans-serif;
+}
+
+.nav {
+  z-index: 222; /* Adjusted z-index */
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+/*.navBar{*/
+/*  width: 100%;*/
+/*}*/
+
+/*.appBar{*/
+/*  width: 100%;*/
+/*}*/

@@ -1,0 +1,49 @@
+.btnTitle {
+    display: flex;
+    flex-wrap: wrap;
+}
+.titleDetail {
+    margin-top: 10px !important;
+}
+.myButton {
+    margin-right: 10px !important;
+    border-radius: 50%;
+    padding: 5px 10px;
+    /*background-color: white !important;*/
+}
+.mapIcon iframe {
+    border-radius: 20px;
+    width: 100%;
+}
+
+/*responsive 469*/
+@media screen and (max-width: 469px) {
+    .titleDetail {
+        font-size: 26px !important;
+        margin-top: 10px !important;
+    }
+    span {
+        font-size: 18px !important;
+    }
+}
+/*responsive 403*/
+@media screen and (max-width: 403px) {
+    .titleDetail {
+        font-size: 20px !important;
+        margin-top: 10px !important;
+    }
+    span {
+        font-size: 14px !important;
+    }
+    .mapIcon iframe {
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .mapIcon iframe {
+        width: 100% !important;
+        /*margin-left: 20px !important;*/
+    }
+}
