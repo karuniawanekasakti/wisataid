@@ -5,10 +5,7 @@ import ListWisata from './pages/listWisata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
 import AboutUs from './pages/aboutUs/AboutUs';
 import DetailPage from './pages/Detail/DetailPage';
-import Login from './pages/HalamanLogin/login';
 import Contribution from './pages/Contribution/Contribution'
-
-
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../src/components/Header/Header';
@@ -77,7 +74,7 @@ function App() {
             {
                 loading ? (
                     <ClimbingBoxLoader
-                        color={mode === 'light' ? '#3F51B5' : '#ffffff'}
+                        color={mode === 'light' ? '#006aec' : '#ffffff'}
                         loading={loading}
                         size={20}
                         style={{width: '100%',height:'100vh', transform: 'translate(-50%, -50%)'}}
@@ -89,14 +86,13 @@ function App() {
                         <Route path="/home" Component={HomePage}/>
                         <Route path="/detail/:id" Component={DetailPage}/>
                         <Route path="/login" Component={Login}/>
-                        <Route path="/contribution" Component={Contribution}/>
-                        <Route path="/AboutUs" Component={AboutUs}/>
-
                     </Routes>
                 )
             }
         </ThemeProvider>
     )
 }
+
+
 
 export default App
