@@ -12,7 +12,7 @@ import {styled, alpha} from '@mui/material/styles';
 // import SearchIcon from '@mui/icons-material/Search';
 import navLinks from "../../utils/NavLinks";
 import './Header.css';
-import Logo from '../../assets/img/WISATA_ID__4_-removebg-preview.png';
+import Logo from '../../assets/img/WISATA_ID__5_-removebg-preview.png';
 
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
