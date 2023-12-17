@@ -3,6 +3,7 @@ import Welcome from './pages/welcome/Welcome'
 import ListWisata from './pages/listWIsata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
 import DetailPage from './pages/Detail/DetailPage';
+import Login from './pages/HalamanLogin/login';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Header from '../src/components/Header/Header';
@@ -52,9 +53,11 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <div className='nav'>
-                <Header className='navBar' toogleColorMode={toogleColorMode}/>
-            </div>
+            {location.pathname !== '/login' && (
+                <div className='nav'>
+                    <Header className='navBar' toogleColorMode={toogleColorMode}/>
+                </div>
+            )}
             {
                 loading ? (
                     <ClimbingBoxLoader
@@ -69,6 +72,7 @@ function App() {
                         <Route path="/list-wisata/:city" Component={ListWisata}/>
                         <Route path="/home" Component={HomePage}/>
                         <Route path="/detail/:id" Component={DetailPage}/>
+                        <Route path="/login" Component={Login}/>
                     </Routes>
                 )
             }
