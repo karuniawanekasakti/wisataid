@@ -22,7 +22,7 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
 
 const IMAGE_URL = 'http://47.128.228.117:4000/images/';
 
-export default function HomePage() {
+export default function LandingPage() {
   const mainSectionRef = useRef(null);
   const [selectedCategory, setSelectedCategory] = useState('Alam');
   const [apiData, setApiData] = useState([]);
@@ -209,4 +209,3 @@ export default function HomePage() {
     </React.Fragment>
   );
 }
-

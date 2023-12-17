@@ -9,8 +9,7 @@ import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import {styled, alpha} from '@mui/material/styles';
-import InputBase from '@mui/material/InputBase';
-import SearchIcon from '@mui/icons-material/Search';
+// import SearchIcon from '@mui/icons-material/Search';
 import navLinks from "../../utils/NavLinks";
 import './Header.css';
 import Logo from '../../assets/img/WISATA_ID__4_-removebg-preview.png';
@@ -20,7 +19,7 @@ import Brightness7Icon from '@mui/icons-material/Brightness7';
 
 import {useTheme} from '@mui/material/styles';
 import HamburgerComponent from "../Hamburger/HamburgerComponent.jsx";
-
+import SearchComponent from "../SearchBar/SearchComponent.jsx";
 
 const Header = (props) => {
     const theme = useTheme();
@@ -50,22 +49,6 @@ const Header = (props) => {
         justifyContent: 'center',
     }));
 
-    const StyledInputBase = styled(InputBase)(({theme}) => ({
-        color: 'inherit',
-        '& .MuiInputBase-input': {
-            padding: theme.spacing(1, 1, 1, 0),
-            // vertical padding + font size from searchIcon
-            paddingLeft: `calc(1em + ${theme.spacing(4)})`,
-            transition: theme.transitions.create('width'),
-            width: '100%',
-            [theme.breakpoints.up('sm')]: {
-                width: '20ch',
-                '&:focus': {
-                    width: '30ch',
-                },
-            },
-        },
-    }));
     return (
         <AppBar position="static" color="primary" className='appBar'>
             <Container maxWidth="xl">
@@ -86,7 +69,9 @@ const Header = (props) => {
                         }}
                     >
                         <div className="logo">
+
                         <img src={Logo} title='WisataId'/>
+
                         </div>
                     </Typography>
 
@@ -94,6 +79,7 @@ const Header = (props) => {
                         <HamburgerComponent/>
                         <div className="logoHp">
                             <img src={Logo} title='WisataId'/>
+
                         </div>
                     </Box>
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
@@ -111,14 +97,11 @@ const Header = (props) => {
                         {theme.palette.mode === 'dark' ? <Brightness7Icon/> : <Brightness4Icon/>}
                     </IconButton>
                     <Box>
-                        <Search>
+                        <Search style={{backgroundColor: 'transparent', width: '100%',padding:'5px'}}>
                             <SearchIconWrapper>
-                                <SearchIcon/>
+                                {/*<SearchIcon/>*/}
                             </SearchIconWrapper>
-                            <StyledInputBase
-                                placeholder="Cari destinasi wisata..."
-                                inputProps={{'aria-label': 'search'}}
-                            />
+                            <SearchComponent className='searchInput'/>
                         </Search>
                     </Box>
                 </Toolbar>

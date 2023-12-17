@@ -1,8 +1,9 @@
 import {Routes, Route} from 'react-router-dom'
 
 import Welcome from './pages/welcome/Welcome'
-import ListWisata from './pages/listWIsata/ListWisata'
+import ListWisata from './pages/listWisata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
+import AboutUs from './pages/aboutUs/AboutUs';
 import DetailPage from './pages/Detail/DetailPage';
 import Contribution from './pages/Contribution/Contribution'
 
@@ -74,13 +75,13 @@ function App() {
                         <Route path="/home" Component={HomePage}/>
                         <Route path="/detail/:id" Component={DetailPage}/>
                         <Route path="/contribution" Component={Contribution}/>
+                        <Route path="/AboutUs" Component={AboutUs}/>
+
                     </Routes>
                 )
             }
         </ThemeProvider>
     )
 }
-
-
 
 export default App
