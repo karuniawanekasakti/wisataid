@@ -7,11 +7,12 @@ import SimbolicImage from '../../assets/img/boyBeach.png';
 import Typography from '@mui/material/Typography';
 import { styled } from '@mui/material/styles';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
-import { Card, CardContent } from '@mui/material';
+// import { Card, CardContent } from '@mui/material';
 import Box from '@mui/material/Box';
 import { useState, useEffect, useRef } from 'react';
 import CarouselImage from '../../components/CarouselImage/CarouselImage.jsx';
 import ButtonGroup from '../../components/Button/ButtonGroup.jsx';
+import { useTheme } from '@mui/material/styles';
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: 'auto',
@@ -29,9 +30,8 @@ export default function HomePage() {
   const [index, setIndex] = useState(0);
 
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
-
+  const theme = useTheme();
   useEffect(() => {
-// ...
         const fetchData = async () => {
           try {
             const response = await fetch('http://47.128.228.117:4000/wisata');
@@ -107,16 +107,15 @@ export default function HomePage() {
           flexDirection: 'column',
           marginTop: '80px',
           minHeight: '100vh',
-          bgcolor: 'none',
         }}
       >
         <Grid container spacing={2}>
           <Grid item xs={12} sm={12} md={6} lg={6} textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-            <img src={SimbolicImage} alt="Boy at the Beach" sx={{ maxWidth: '100%' }} height={'350px'} />
+            <img src={SimbolicImage} alt="Boy at the Beach" style={{ maxWidth: '100%' }} height={'350px'} />
           </Grid>
 
-          <Grid item xs={12} sm={12} md={6} lg={6}>
-            <DemoPaper variant="string">
+          <Grid item xs={12} sm={12} md={6} lg={6} style={{backgroundColor: theme.palette.background.default}}>
+            <DemoPaper variant="string" style={{backgroundColor: theme.palette.background.default}}>
               <h1 className='sub'>Welcome to Wisata Id</h1>
               <Typography variant="body1" gutterBottom sx={{ textAlign: 'left', marginBottom: '25px', marginTop: '25px' }}>
                 "Rencanakan liburan tak terlupakan Anda dengan mudah dan menyenangkan bersama Wisata Id. Mulailah petualangan Anda hari ini!"
@@ -143,7 +142,7 @@ export default function HomePage() {
             </DemoPaper>
           </Grid>
           <Grid item xs={12} md={12} lg={12}>
-            <DemoPaper variant="string">
+            <DemoPaper variant="string" style={{          backgroundColor: theme.palette.background.default}}>
               <Typography variant="h1" gutterBottom sx={{ textAlign: 'left', fontWeight: 'bold' }}>
                 Trending Destination
               </Typography>
@@ -163,7 +162,7 @@ export default function HomePage() {
             ))}
           </Grid>
           <Grid item xs={12} lg={12}>
-            <Paper elevation={0} sx={{ p: 4, mt: 4 }}>
+            <Paper elevation={0} sx={{ p: 4, mt: 4 }} style={{          backgroundColor: theme.palette.background.default}}>
                 <Box sx={{ display: 'flex', alignItems: 'center' }}>
                     <Typography variant="h4" gutterBottom>
                       {randomPlace.nama_wisata} <span

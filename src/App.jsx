@@ -5,6 +5,7 @@ import ListWisata from './pages/listWIsata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
 import AboutUs from './pages/aboutUs/AboutUs';
 import DetailPage from './pages/Detail/DetailPage';
+import Login from './pages/HalamanLogin/login';
 import Contribution from './pages/Contribution/Contribution'
 
 
@@ -38,8 +39,19 @@ function App() {
             createTheme({
                 palette: {
                     mode,
-                    button: {
-                        main: mode === 'light' ? '#000000' : '#ffffff', //tambah ini supaya tidak ribet atur warna button
+                    primary: {
+                        main: mode === 'dark' ? '#1F3A5F' : '#3F51B5',
+                    },
+                    secondary: {
+                        main: mode === 'dark' ? '#3D5A80' : '#2196F3',
+                    },
+                    text: {
+                        primary: mode === 'dark' ? '#FFFFFF' : '#333333',
+                        secondary: mode === 'dark' ? '#e0e0e0' : '#5c5c5c',
+                    },
+                    background: {
+                        default: mode === 'dark' ? '#0F1C2E' : '#FFFFFF',
+                        paper: mode === 'dark' ? '#1f2b3e' : '#f5f5f5',
                     },
                 },
             }),
@@ -57,13 +69,15 @@ function App() {
     return (
         <ThemeProvider theme={theme}>
             <CssBaseline/>
-            <div className='nav'>
-                <Header className='navBar' toogleColorMode={toogleColorMode}/>
-            </div>
+            {location.pathname !== '/login' && (
+                <div className='nav'>
+                    <Header className='navBar' toogleColorMode={toogleColorMode}/>
+                </div>
+            )}
             {
                 loading ? (
                     <ClimbingBoxLoader
-                        color={mode === 'light' ? '#006aec' : '#ffffff'}
+                        color={mode === 'light' ? '#3F51B5' : '#ffffff'}
                         loading={loading}
                         size={20}
                         style={{width: '100%',height:'100vh', transform: 'translate(-50%, -50%)'}}
@@ -74,6 +88,7 @@ function App() {
                         <Route path="/list-wisata/:city" Component={ListWisata}/>
                         <Route path="/home" Component={HomePage}/>
                         <Route path="/detail/:id" Component={DetailPage}/>
+                        <Route path="/login" Component={Login}/>
                         <Route path="/contribution" Component={Contribution}/>
                         <Route path="/AboutUs" Component={AboutUs}/>
 

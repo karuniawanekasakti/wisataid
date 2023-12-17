@@ -7,12 +7,14 @@ import RatingComponent from "../../components/Rating/RatingComponent.jsx";
 import Grid from "@mui/material/Grid";
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
 import {useEffect, useState} from "react";
+import {useTheme} from "@mui/material/styles";
 
 export default function DetailPage() {
     const [data, setData] = useState(null);
-    const BASE_URL = 'http://47.128.228.117:4000/wisata';
-    const BASE_IMAGE = 'http://47.128.228.117:4000/images/';
+    const BASE_URL = 'https://wisataid-api.my.id/wisata';
+    const BASE_IMAGE = 'https://wisataid-api.my.id/images/';
 
+    const theme = useTheme();
     const {id} = useParams();
 
     useEffect(() => {
@@ -37,7 +39,7 @@ export default function DetailPage() {
 
     const img = (`${BASE_IMAGE}${data.foto_wisata}`);
     return (
-        <Container maxWidth="100%">
+        <Container maxWidth="100%" style={{backgroundColor: theme.palette.background.paper}}>
             <Paper elevation={0} sx={{p: 4, mt: 4}}>
                 <Box sx={{marginTop: 2,}}>
                     <ButtonComponent
@@ -47,6 +49,7 @@ export default function DetailPage() {
                         size="small"
                         to={`/list-wisata/${data.provinsi}`}
                         variant="outlined"
+                        style={{color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5'}}
                     />
                 </Box>
                 <Box className='btnTitle' sx={{display: 'flex', alignItems: 'center'}}>

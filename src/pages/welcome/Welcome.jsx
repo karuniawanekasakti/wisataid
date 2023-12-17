@@ -12,7 +12,7 @@ import { useEffect } from 'react';
 
 
 const Welcome = () => {
-  const BASE_URL = 'http://47.128.228.117:4000/wisata';
+  const BASE_URL = 'https://wisataid-api.my.id/wisata';
   const [selectedCity, setSelectedCity] = React.useState('');
   const [city, setCity] = React.useState([]);
 

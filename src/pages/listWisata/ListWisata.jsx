@@ -209,7 +209,8 @@ const HomePage = () => {
                                 size='medium'
                                 style={{
                                     marginLeft: 'auto',
-                                    marginRight: '10px'
+                                    marginRight: '10px',
+                                    color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5'
                                 }}
                                 onClick={(event) => handleOpen(filter.name, event)}
                             />
