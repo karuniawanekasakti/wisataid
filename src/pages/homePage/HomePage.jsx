@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -21,7 +22,7 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const IMAGE_URL = 'http://47.128.228.117:4000/images/';
+const IMAGE_URL = `https://wisataid-api.my.id/images/`;
 
 export default function HomePage() {
   const mainSectionRef = useRef(null);
@@ -34,7 +35,7 @@ export default function HomePage() {
   useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('http://47.128.228.117:4000/wisata');
+            const response = await fetch('https://wisataid-api.my.id/wisata');
             if (!response.ok) {
               const errorMessage = await response.text();
               throw new Error(`Server Error: ${errorMessage}`);
@@ -118,7 +119,7 @@ export default function HomePage() {
             <DemoPaper variant="string" style={{backgroundColor: theme.palette.background.default}}>
               <h1 className='sub'>Welcome to Wisata Id</h1>
               <Typography variant="body1" gutterBottom sx={{ textAlign: 'left', marginBottom: '25px', marginTop: '25px' }}>
-                "Rencanakan liburan tak terlupakan Anda dengan mudah dan menyenangkan bersama Wisata Id. Mulailah petualangan Anda hari ini!"
+                Rencanakan liburan tak terlupakan Anda dengan mudah dan menyenangkan bersama Wisata Id. Mulailah petualangan Anda hari ini!
               </Typography>
               <Typography variant="body1" gutterBottom sx={{ textAlign: 'left' }}>
                 Dengan koleksi destinasi wisata yang sangat beragam, kami mengundang Anda untuk menjelajahi keindahan alam, mengenal budaya baru, dan membuat kenangan tak terlupakan di setiap langkah perjalanan Anda.
