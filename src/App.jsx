@@ -1,14 +1,8 @@
 import {Routes, Route} from 'react-router-dom'
 import Welcome from './pages/welcome/Welcome'
-<<<<<<< HEAD
 import ListWisata from './pages/listWisata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
 import AboutUs from './pages/aboutUs/AboutUs';
-=======
-// import ListWisata from './pages/listWIsata/ListWisata'
-import ListWisata from './pages/homePage/ListWisata.jsx';
-import LandingPage from './pages/landingPage/LandingPage.jsx';
->>>>>>> aa05447 (mengembalikan ulang data yang hiang setelah git force)
 import DetailPage from './pages/Detail/DetailPage';
 import {ThemeProvider, createTheme} from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';

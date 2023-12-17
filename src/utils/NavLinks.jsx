@@ -5,10 +5,6 @@ const navLinks = [
     path: '/home'
   },
   {
-    name: 'Maps',
-    path: '/maps'
-  },
-  {
     name: 'Contribution',
     path: '/contribution'
   },
