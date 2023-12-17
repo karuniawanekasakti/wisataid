@@ -10,8 +10,8 @@ import {useEffect, useState} from "react";
 
 export default function DetailPage() {
     const [data, setData] = useState(null);
-    const BASE_URL = 'http://47.128.228.117:4000/wisata';
-    const BASE_IMAGE = 'http://47.128.228.117:4000/images/';
+    const BASE_URL = 'https://wisataid-api.my.id/wisata';
+    const BASE_IMAGE = 'https://wisataid-api.my.id/images/';
 
     const {id} = useParams();
 

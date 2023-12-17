@@ -34,8 +34,19 @@ function App() {
             createTheme({
                 palette: {
                     mode,
-                    button: {
-                        main: mode === 'light' ? '#000000' : '#ffffff', //tambah ini supaya tidak ribet atur warna button
+                    primary: {
+                        main: mode === 'dark' ? '#1F3A5F' : '#3F51B5',
+                    },
+                    secondary: {
+                        main: mode === 'dark' ? '#3D5A80' : '#2196F3',
+                    },
+                    text: {
+                        primary: mode === 'dark' ? '#FFFFFF' : '#333333',
+                        secondary: mode === 'dark' ? '#e0e0e0' : '#5c5c5c',
+                    },
+                    background: {
+                        default: mode === 'dark' ? '#0F1C2E' : '#FFFFFF',
+                        paper: mode === 'dark' ? '#1f2b3e' : '#f5f5f5',
                     },
                 },
             }),

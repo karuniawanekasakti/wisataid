@@ -4,18 +4,18 @@ import {Avatar, Container, Box} from "@mui/material";
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
 import TextInput from "../../components/TextInput/TextInput.jsx";
 import Typography from "@mui/material/Typography";
-import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
+import ButtonComponentLgn from "../../components/Button/ButtonComponentLgn.jsx";
 import {Visibility,VisibilityOff} from "@mui/icons-material";
 import {useState} from "react";
 import AllertMessage from "../../components/AlertMessage/AllertMessage.jsx";
-import {ThemeProvider} from "@emotion/react";
-import {createTheme} from "@mui/material/styles";
+// import {ThemeProvider} from "@emotion/react";
+// import {createTheme} from "@mui/material/styles";
 
-const theme = createTheme({
-    palette: {
-        primary: 'purple'
-    },
-});
+// const theme = createTheme({
+//     palette: {
+//         primary: 'purple'
+//     },
+// });
 export default function Login() {
     const [ isShowPassword, setIsShowPassword ] = useState(false);
     const [ isSuccess, setIsSuccess ] = useState(false);
@@ -41,7 +41,7 @@ export default function Login() {
         setIsFailed(false);
     }
     return (
-        <ThemeProvider theme={theme}>
+        // <ThemeProvider theme={theme}>
             <Container maxWidth="xs">
                 <Box sx={{
                     marginTop: 8,
@@ -68,6 +68,7 @@ export default function Login() {
                         margin="normal"
                         name="email"
                         type="text"
+                        style={{ backgroundColor: 'transparent' }}
                     />
                     <div style={{display: 'flex', width: '100%', position: 'relative'}}>
                         <TextInput
@@ -80,6 +81,7 @@ export default function Login() {
                             margin="normal"
                             name="password"
                             type={isShowPassword ? 'text' : 'password'}
+                            style={{ backgroundColor: 'transparent' }}
                         />
                         <div
                             onClick={() => setIsShowPassword(!isShowPassword)}
@@ -92,7 +94,7 @@ export default function Login() {
                             )}
                         </div>
                     </div>
-                    <ButtonComponent
+                    <ButtonComponentLgn
                         type="submit"
                         fullWidth
                         text="Sign In"
@@ -113,6 +115,6 @@ export default function Login() {
                     />
                 </Box>
             </Container>
-        </ThemeProvider>
+        // </ThemeProvider>
     )
 }

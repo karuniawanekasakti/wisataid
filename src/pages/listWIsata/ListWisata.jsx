@@ -18,8 +18,8 @@ const HomePage = () => {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [anchorEl, setAnchorEl] = useState({rating: null, kategori: null, kota: null});
-    const BASE_URL = 'http://47.128.228.117:4000/wisata';
-    const IMAGE_URL = `http://47.128.228.117:4000/images/`;
+    const BASE_URL = 'https://wisataid-api.my.id/wisata';
+    const IMAGE_URL = `https://wisataid-api.my.id/images/`;
     const ratingOptions = [1, 2, 3, 4, 5];
     const kategoriOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kategori))] : [];
     const kotaOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kota))] : [];
@@ -209,7 +209,8 @@ const HomePage = () => {
                                 size='medium'
                                 style={{
                                     marginLeft: 'auto',
-                                    marginRight: '10px'
+                                    marginRight: '10px',
+                                    color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5' // Ubah warna teks berdasarkan mode
                                 }}
                                 onClick={(event) => handleOpen(filter.name, event)}
                             />
