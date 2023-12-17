@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom'
 
 import Welcome from './pages/welcome/Welcome'
-import ListWisata from './pages/listWIsata/ListWisata'
+import ListWisata from './pages/listWIsata/ListWisata';
 import HomePage from './pages/homePage/HomePage';
 import AboutUs from './pages/aboutUs/AboutUs';
 import DetailPage from './pages/Detail/DetailPage';
