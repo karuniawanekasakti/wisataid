@@ -16,14 +16,21 @@ import Logo from '../../assets/img/WISATA_ID__5_-removebg-preview.png';
 
 import Brightness4Icon from '@mui/icons-material/Brightness4';
 import Brightness7Icon from '@mui/icons-material/Brightness7';
+// import AccountCircleIcon from '@mui/icons-material/AccountCircle';
+import ButtonComponent from "../Button/ButtonComponent.jsx";
 
 import {useTheme} from '@mui/material/styles';
 import HamburgerComponent from "../Hamburger/HamburgerComponent.jsx";
 import SearchComponent from "../SearchBar/SearchComponent.jsx";
+import {Link} from "react-router-dom";
 
 const Header = (props) => {
     const theme = useTheme();
 
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        props.onLogout();
+    }
     const Search = styled('div')(({theme}) => ({
         position: 'relative',
         borderRadius: theme.shape.borderRadius,
@@ -69,29 +76,48 @@ const Header = (props) => {
                         }}
                     >
                         <div className="logo">
-
-                        <img src={Logo} title='WisataId'/>
-
+                            <img src={Logo} title='WisataId'/>
                         </div>
                     </Typography>
 
                     <Box sx={{flexGrow: 1, display: {xs: 'flex', md: 'none'}}}>
                         <HamburgerComponent/>
-                        <div className="logoHp">
-                            <img src={Logo} title='WisataId'/>
-
-                        </div>
+                        <Link
+                            to="/"
+                            style={{cursor:'pointer'}}
+                        >
+                            <div className="logoHp">
+                                <img src={Logo} title='WisataId'/>
+                            </div>
+                        </Link>
                     </Box>
+                    {/*<Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>*/}
+                    {/*    {navLinks.map((link) => (*/}
+                    {/*        <Button*/}
+                    {/*            key={link.name}*/}
+                    {/*            href={link.path}*/}
+                    {/*            sx={{my: 1, color: 'white', display: 'block'}}*/}
+                    {/*        >*/}
+                    {/*            {link.name}*/}
+                    {/*        </Button>*/}
+                    {/*    ))}*/}
+                    {/*</Box>*/}
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
-                        {navLinks.map((link) => (
-                            <Button
-                                key={link.name}
-                                href={link.path}
-                                sx={{my: 1, color: 'white', display: 'block'}}
-                            >
-                                {link.name}
-                            </Button>
-                        ))}
+                        {navLinks.map((link) => {
+                            if (link.name === 'Add Wisata' && !props.isLoggedIn) {
+                                return null;
+                            }
+
+                            return (
+                                <Button
+                                    key={link.name}
+                                    href={link.path}
+                                    sx={{my: 1, color: 'white', display: 'block'}}
+                                >
+                                    {link.name}
+                                </Button>
+                            );
+                        })}
                     </Box>
                     <IconButton sx={{ml: 1}} onClick={props.toogleColorMode} color="inherit">
                         {theme.palette.mode === 'dark' ? <Brightness7Icon/> : <Brightness4Icon/>}
@@ -104,6 +130,24 @@ const Header = (props) => {
                             <SearchComponent className='searchInput'/>
                         </Search>
                     </Box>
+                    <ButtonComponent
+                        variant="outlined"
+                        text={props.isLoggedIn ? 'Logout' : 'Login' }
+                        size='medium'
+                        style={{
+                            marginLeft: 'auto',
+                            marginRight: '10px',
+                            color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#FFFFFF'
+                        }}
+                        onClick={props.isLoggedIn ? handleLogout : null}
+                        to={!props.isLoggedIn ? '/login' : '/'}
+                    />
+                    {/*<IconButton sx={{ml: 1}}color="inherit">*/}
+                    {/*    <AccountCircleIcon*/}
+                    {/*        style={{fontSize:'1.8rem'}}*/}
+                    {/*        */}
+                    {/*    />*/}
+                    {/*</IconButton>*/}
                 </Toolbar>
             </Container>
         </AppBar>

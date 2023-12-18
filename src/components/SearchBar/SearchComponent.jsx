@@ -8,13 +8,13 @@ import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 
 const fetchData = debounce(async (input, callback) => {
-    const response = await fetch(`https://wisataid-api.my.id/wisata?search=${input}`);
+    const response = await fetch(`http://47.128.153.249:4000/wisata?search=${input}`);
     const data = await response.json();
     callback(data.data);
 }, 400);
 
 export default function SearchComponent(props) {
-    const BASE_IMAGE = 'https://wisataid-api.my.id/images/';
+    const BASE_IMAGE = 'http://47.128.153.249:4000/images/';
     const theme = useTheme();
     const navigate = useNavigate();
     const [value, setValue] = React.useState(null);

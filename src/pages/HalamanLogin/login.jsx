@@ -9,13 +9,21 @@ import {Visibility, VisibilityOff} from "@mui/icons-material";
 import {useState} from "react";
 import AllertMessage from "../../components/AlertMessage/AllertMessage.jsx";
 import {useNavigate} from "react-router-dom";
+import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
+import {useTheme} from "@mui/material/styles";
 
-export default function Login() {
+export default function Login(props) {
     const [isShowPassword, setIsShowPassword] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [isFailed, setIsFailed] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
     const navigate = useNavigate();
+    const theme = useTheme();
+
+
+    const handleBack = () => {
+        navigate(-1);
+    }
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -23,7 +31,7 @@ export default function Login() {
         const email = data.get('email');
         const password = data.get('password');
 
-        fetch('https://wisataid-api.my.id/login', {
+        fetch('http://47.128.153.249:4000/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -37,6 +45,8 @@ export default function Login() {
             .then(data => {
                 if (data.token) {
                     localStorage.setItem('token', data.token);
+                    // eslint-disable-next-line react/prop-types
+                    props.onLogin(data.token);
                     setIsSuccess(true);
                     setTimeout(() => {
                         navigate('/add-wisata');
@@ -59,6 +69,18 @@ export default function Login() {
     }
     return (
         // <ThemeProvider theme={theme}>
+        <>
+            <ButtonComponent
+                variant="outlined"
+                text='Kembali'
+                size='medium'
+                style={{
+                    left: '25px',
+                    top:'50px',
+                    color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5' // Ubah warna teks berdasarkan mode
+                }}
+                onClick={handleBack}
+            />
         <Container maxWidth="xs">
             <Box sx={{
                 marginTop: 25,
@@ -136,6 +158,7 @@ export default function Login() {
                     text="Sign In"
                     variant="contained"
                     sx={{mt: 3, mb: 2}}
+                    style={{top:'10px'}}
                 />
                 <AllertMessage
                     label="Berhasil Login"
@@ -151,6 +174,7 @@ export default function Login() {
                 />
             </Box>
         </Container>
+        </>
         // </ThemeProvider>
     )
 }
