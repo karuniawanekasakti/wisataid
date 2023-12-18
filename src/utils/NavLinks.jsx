@@ -12,6 +12,10 @@ const navLinks = [
     name: 'About',
     path: '/AboutUs'
   },
+  {
+    name: 'Add Wisata',
+    path: '/add-wisata'
+  },
 
 ]
 

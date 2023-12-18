@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import * as React from 'react';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
@@ -13,6 +14,11 @@ import { useState, useEffect, useRef } from 'react';
 import CarouselImage from '../../components/CarouselImage/CarouselImage.jsx';
 import ButtonGroup from '../../components/Button/ButtonGroup.jsx';
 import { useTheme } from '@mui/material/styles';
+import Footer from '../../components/Footer/Footer.jsx';
+// import {useTheme} from '@mui/material/styles';
+
+
+import './HomePage.css';
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: 'auto',
@@ -21,7 +27,8 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const IMAGE_URL = 'http://47.128.228.117:4000/images/';
+const IMAGE_URL = `https://wisataid-api.my.id/images/`;
+
 
 export default function HomePage() {
   const mainSectionRef = useRef(null);
@@ -29,12 +36,15 @@ export default function HomePage() {
   const [apiData, setApiData] = useState([]);
   const [index, setIndex] = useState(0);
 
+  // const theme = useTheme();
+
+
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const theme = useTheme();
   useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('http://47.128.228.117:4000/wisata');
+            const response = await fetch('https://wisataid-api.my.id/wisata');
             if (!response.ok) {
               const errorMessage = await response.text();
               throw new Error(`Server Error: ${errorMessage}`);
@@ -108,8 +118,10 @@ export default function HomePage() {
           marginTop: '80px',
           minHeight: '100vh',
         }}
+        maxWidth={'xl'}
+        disableGutters={true}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} maxWidth={'xl'} paddingLeft={'15px'} paddingRight={'15px'}>
           <Grid item xs={12} sm={12} md={6} lg={6} textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <img src={SimbolicImage} alt="Boy at the Beach" style={{ maxWidth: '100%' }} height={'350px'} />
           </Grid>
@@ -118,7 +130,7 @@ export default function HomePage() {
             <DemoPaper variant="string" style={{backgroundColor: theme.palette.background.default}}>
               <h1 className='sub'>Welcome to Wisata Id</h1>
               <Typography variant="body1" gutterBottom sx={{ textAlign: 'left', marginBottom: '25px', marginTop: '25px' }}>
-                "Rencanakan liburan tak terlupakan Anda dengan mudah dan menyenangkan bersama Wisata Id. Mulailah petualangan Anda hari ini!"
+                Rencanakan liburan tak terlupakan Anda dengan mudah dan menyenangkan bersama Wisata Id. Mulailah petualangan Anda hari ini!
               </Typography>
               <Typography variant="body1" gutterBottom sx={{ textAlign: 'left' }}>
                 Dengan koleksi destinasi wisata yang sangat beragam, kami mengundang Anda untuk menjelajahi keindahan alam, mengenal budaya baru, dan membuat kenangan tak terlupakan di setiap langkah perjalanan Anda.
@@ -204,6 +216,9 @@ export default function HomePage() {
             ))}
           </Grid>
         </Grid>
+        <Grid  className='footer' marginRight={'0'} marginLeft={'0'}>
+          <Footer/>       
+        </Grid>        
       </Container>
     </React.Fragment>
   );

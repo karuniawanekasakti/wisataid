@@ -12,6 +12,8 @@ import KeyboardArrowLeft from '@mui/icons-material/KeyboardArrowLeft';
 import KeyboardArrowRight from '@mui/icons-material/KeyboardArrowRight';
 import LanguageIcon from '@mui/icons-material/Language';
 import Button from '@mui/material/Button';
+import Footer from '../../components/Footer/Footer.jsx';
+
 
 import './AboutUs.css';
 
@@ -70,7 +72,16 @@ const AboutUs = () => {
   return (
     <React.Fragment>
       <CssBaseline />
-      <Container maxWidth="lg">
+      <Container 
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          marginTop: '80px',
+          minHeight: '100vh',
+        }}
+        maxWidth={'xl'}
+        disableGutters={true}
+      >
         <Box sx={{ bgcolor: 'transparent', marginTop: '70px', flexGrow: 1}} className='box-konten1'>
 	       	<Grid container sx={{spacing: '2', minHeight: '160', marginLeft: '5%', marginRight: '5%',}}>
 			        <Grid xs={12}>	       		
@@ -159,8 +170,11 @@ const AboutUs = () => {
 					    	style={{maxHeight: '50px', width: 'auto', display: 'inline-block', marginLeft: '10px'}}
 					    	/>
 					    </Grid>			    
-			    </Grid>
+			    </Grid>  
         </Box>
+        <Grid className='footer' marginRight={'0'} marginLeft={'0'}>
+          <Footer/>       
+        </Grid>
       </Container>
     </React.Fragment>
   );

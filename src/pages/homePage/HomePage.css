@@ -1,0 +1,100 @@
+/*#EDF1D6: #EDF1D6;
+#9DC08B: #9DC08B;
+#609966: #609966;
+#40513B: #40513B;
+
+footer {
+  background-color: #9DC08B;
+  color: #40513B;
+}
+.footer{
+  background-color: #9DC08B;
+  padding: 70px 0;
+}
+.footer-col{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4{
+  font-size: 18px;
+  color: #40513B;
+  text-transform: capitalize;
+  margin-bottom: 35px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+}
+.footer-col h4::before{
+  content: '';
+  position: absolute;
+  left:0;
+  bottom: -10px;
+  background-color: #EDF1D6;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child){
+  margin-bottom: 10px;
+}
+.footer-col ul li a{
+  font-size: 16px;
+  text-transform: capitalize;
+  text-decoration: none;
+  font-weight: 300;
+  color: #40513B;
+  display: block;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.footer-col ul li a:hover{
+  color: #ffffff;
+  padding-left: 8px;
+}
+.footer-col .social-links a{
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-color: #EDF1D6;
+  margin: 10px 10px 0;
+  text-align: center;
+  line-height: 55px;
+  border-radius: 50%;
+  color: #609966;
+  transition: all 0.5s ease;
+}
+.footer-col .social-links svg {
+  fill: #609966;
+
+}
+.footer-col .social-links svg:hover{
+  fill: #EDF1D6;
+}
+
+.footer-col .social-links a:hover{
+  background-color: #609966;
+}
+
+@media(max-width: 767px){
+  .footer-col{
+    width: 50%;
+    margin-bottom: 30px;
+  }
+  #query{
+    width: 60%;
+  }
+  #query:focus {
+    width: 100%;
+  }
+}
+@media(max-width: 574px){
+  .footer-col{
+    width: 100%;
+  }
+  #query{
+    width: 100%;
+  }
+  #query:focus {
+    width: 100%;
+  }
+}*/
