@@ -1,4 +1,4 @@
-![Mockup Wisata ID](https://drive.google.com/file/d/1ZCuewz8Lldrir9t304BL3-MXVFwYmCXH/view?usp=drive_link)
+![Mockup WisataId](https://drive.google.com/uc?export=download&id=1ZCuewz8Lldrir9t304BL3-MXVFwYmCXH)
 
 <h1 align="center">
     <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Welcome+to+Wisata+ID+👋;" />
