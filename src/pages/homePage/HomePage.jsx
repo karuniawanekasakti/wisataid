@@ -27,7 +27,8 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const IMAGE_URL = 'https://wisataid-api.my.id/images/';
+const IMAGE_URL = `https://wisataid-api.my.id/images/`;
+
 
 export default function HomePage() {
   const mainSectionRef = useRef(null);
