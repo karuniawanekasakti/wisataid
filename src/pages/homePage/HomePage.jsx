@@ -14,6 +14,11 @@ import { useState, useEffect, useRef } from 'react';
 import CarouselImage from '../../components/CarouselImage/CarouselImage.jsx';
 import ButtonGroup from '../../components/Button/ButtonGroup.jsx';
 import { useTheme } from '@mui/material/styles';
+import Footer from '../../components/Footer/Footer.jsx';
+// import {useTheme} from '@mui/material/styles';
+
+
+import './HomePage.css';
 
 const DemoPaper = styled(Paper)(({ theme }) => ({
   width: 'auto',
@@ -29,6 +34,9 @@ export default function HomePage() {
   const [selectedCategory, setSelectedCategory] = useState('Alam');
   const [apiData, setApiData] = useState([]);
   const [index, setIndex] = useState(0);
+
+  // const theme = useTheme();
+
 
   const [currentImageIndex, setCurrentImageIndex] = React.useState(0);
   const theme = useTheme();
@@ -109,8 +117,10 @@ export default function HomePage() {
           marginTop: '80px',
           minHeight: '100vh',
         }}
+        maxWidth={'xl'}
+        disableGutters={true}
       >
-        <Grid container spacing={2}>
+        <Grid container spacing={2} maxWidth={'xl'} paddingLeft={'15px'} paddingRight={'15px'}>
           <Grid item xs={12} sm={12} md={6} lg={6} textAlign={'center'} sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
             <img src={SimbolicImage} alt="Boy at the Beach" style={{ maxWidth: '100%' }} height={'350px'} />
           </Grid>
@@ -205,6 +215,9 @@ export default function HomePage() {
             ))}
           </Grid>
         </Grid>
+        <Grid  className='footer' marginRight={'0'} marginLeft={'0'}>
+          <Footer/>       
+        </Grid>        
       </Container>
     </React.Fragment>
   );
