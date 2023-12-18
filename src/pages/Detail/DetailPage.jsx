@@ -39,8 +39,8 @@ export default function DetailPage() {
 
     const img = (`${BASE_IMAGE}${data.foto_wisata}`);
     return (
-        <Container maxWidth="100%" style={{backgroundColor: theme.palette.background.paper}}>
-            <Paper elevation={0} sx={{p: 4, mt: 4}}>
+        <Container maxWidth="100%" style={{backgroundColor: theme.palette.background.default}}>
+            <Paper elevation={0} sx={{p: 4, mt: 4}} style={{backgroundColor: theme.palette.background.default}}>
                 <Box sx={{marginTop: 2,}}>
                     <ButtonComponent
                         className='myButton'

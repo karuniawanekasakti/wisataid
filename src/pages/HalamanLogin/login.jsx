@@ -8,21 +8,14 @@ import ButtonComponentLgn from "../../components/Button/ButtonComponentLgn.jsx";
 import {Visibility, VisibilityOff} from "@mui/icons-material";
 import {useState} from "react";
 import AllertMessage from "../../components/AlertMessage/AllertMessage.jsx";
-// import {ThemeProvider} from "@emotion/react";
-// import {createTheme} from "@mui/material/styles";
+import {useNavigate} from "react-router-dom";
 
-// const theme = createTheme({
-//     palette: {
-//         primary: 'purple'
-//     },
-// });
 export default function Login() {
     const [isShowPassword, setIsShowPassword] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
     const [isFailed, setIsFailed] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
-
-
+    const navigate = useNavigate();
     const handleSubmit = (event) => {
         event.preventDefault();
         const data = new FormData(event.currentTarget);
@@ -45,6 +38,9 @@ export default function Login() {
                 if (data.token) {
                     localStorage.setItem('token', data.token);
                     setIsSuccess(true);
+                    setTimeout(() => {
+                        navigate('/add-wisata');
+                    }, 2000);
                 } else {
                     setErrorMessage(data.message);
                     setIsFailed(true);
@@ -53,14 +49,13 @@ export default function Login() {
             .catch((error) => {
                 setErrorMessage(error.message);
                 setIsFailed(true);
-                // console.error('Error:', error);
             });
     }
 
     const handleClose = () => {
         setIsSuccess(false);
         setIsFailed(false);
-        setErrorMessage()
+        setErrorMessage();
     }
     return (
         // <ThemeProvider theme={theme}>
