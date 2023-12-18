@@ -8,6 +8,8 @@ import Grid from "@mui/material/Grid";
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
 import {useEffect, useState} from "react";
 import {useTheme} from "@mui/material/styles";
+import Footer from '../../components/Footer/Footer.jsx';
+
 
 export default function DetailPage() {
     const [data, setData] = useState(null);
@@ -39,8 +41,18 @@ export default function DetailPage() {
 
     const img = (`${BASE_IMAGE}${data.foto_wisata}`);
     return (
-        <Container maxWidth="100%" style={{backgroundColor: theme.palette.background.paper}}>
-            <Paper elevation={0} sx={{p: 4, mt: 4}}>
+        <Container
+        sx={{
+          display: 'flex',
+          flexDirection: 'column',
+          marginTop: '15px',
+          minHeight: '100vh',
+        }}
+        maxWidth={'xl'}
+        disableGutters={true}
+        style={{backgroundColor: theme.palette.background.default}}
+        >
+            <Paper elevation={0} sx={{p: 4, mt: 4}} style={{backgroundColor: theme.palette.background.default}} maxWidth={'md'}>
                 <Box sx={{marginTop: 2,}}>
                     <ButtonComponent
                         className='myButton'
@@ -87,6 +99,9 @@ export default function DetailPage() {
                     </Grid>
                 </Box>
             </Paper>
+            <Grid className='footer' marginTop={'30px'} marginRight={'0'} marginLeft={'0'}>
+              <Footer/>       
+            </Grid>                    
         </Container>
     )
 }

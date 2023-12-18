@@ -2,7 +2,6 @@ import * as React from 'react';
 import SelectComponent from '../../components/Select/SelectComponent';
 import ButtonComponent from '../../components/Button/ButtonComponent';
 import Stack from '@mui/material/Stack';
-
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 
 
@@ -54,7 +53,7 @@ const Welcome = () => {
                 variant="outlined"
                 size="medium"
                 label="City"
-                placeholder="Pilih Provinsi Mu"
+                placeholder="Pilih Provinsimu"
                 menuItems={Array.isArray(city) ? city.map((item) => ({
                   label: item.label,
                   value: item.value,

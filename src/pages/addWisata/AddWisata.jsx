@@ -1,18 +1,16 @@
-  /* eslint-disable no-unused-vars */
-  // eslint-disable-next-line no-unused-vars
-  import { useState } from "react";
-  import Stack from '@mui/material/Stack';
-  import FormComponent from '../../components/Form/FormComponent';
-  import Typography from "@mui/material/Typography";
-  import Container from '@mui/material/Container';
-  import Grid from "@mui/material/Grid";
-  import Footer from '../../components/Footer/Footer.jsx';
-  // import './Contribution.css'
+import Typography from "@mui/material/Typography";
+import Container from '@mui/material/Container';
+import Grid from "@mui/material/Grid";
+import Footer from '../../components/Footer/Footer.jsx';
 
-  const Contribution = () => {
+import FormComponent from '../../components/Form2/FormComponent2';
 
-      return (
-        <Container
+import './AddWisata.css';
+
+const Addwisata = () => {
+  return (
+
+    <Container
         sx={{
           display: 'flex',
           flexDirection: 'column',
@@ -25,9 +23,9 @@
         >
           <Grid Container spacing={2}>
             <Grid item textAlign={'center'} marginBottom={'40px'}>
-              <h1>Contribution</h1>
+              <h1>Tambah Wisata</h1>
               <Typography variant="body1">
-                Kirimkan informasi destinasi wisata baru kepada kami agar orang lain bisa mengetahuinya.
+                Tambahkan informasi wisata baru agar orang lain bisa mengetahuinya.
               </Typography>
             </Grid>
             <Grid item marginBottom={'100px'}>
@@ -38,7 +36,7 @@
             </Grid>       
           </Grid>
         </Container>
-      )
-  }
+  )
+}
 
-  export default Contribution;
+export default Addwisata;
