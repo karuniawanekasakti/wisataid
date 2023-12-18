@@ -134,6 +134,7 @@ const Header = (props) => {
                         variant="outlined"
                         text={props.isLoggedIn ? 'Logout' : 'Login' }
                         size='medium'
+                        className='logButton hide-on-mobile'
                         style={{
                             marginLeft: 'auto',
                             marginRight: '10px',
@@ -142,12 +143,6 @@ const Header = (props) => {
                         onClick={props.isLoggedIn ? handleLogout : null}
                         to={!props.isLoggedIn ? '/login' : '/'}
                     />
-                    {/*<IconButton sx={{ml: 1}}color="inherit">*/}
-                    {/*    <AccountCircleIcon*/}
-                    {/*        style={{fontSize:'1.8rem'}}*/}
-                    {/*        */}
-                    {/*    />*/}
-                    {/*</IconButton>*/}
                 </Toolbar>
             </Container>
         </AppBar>
