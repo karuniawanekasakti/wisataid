@@ -276,7 +276,7 @@ const HomePage = () => {
                 </Grid> 
             </div>
         </div>
-        <Footer/> 
+        <Footer className='footerrrrrrrrr'/>
         </>
     )
 }

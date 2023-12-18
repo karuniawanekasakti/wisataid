@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 import * as React from "react";
 import Container from "@mui/material/Container";
 import Typography from "@mui/material/Typography";
@@ -6,7 +7,7 @@ import Grid from "@mui/material/Grid";
 import { Facebook, Instagram, Twitter, GitHub} from "@mui/icons-material";
 import { Box } from "@mui/material";
 import { useTheme } from '@mui/material/styles';
-export default function Footer() {
+export default function Footer(props) {
 
   const theme = useTheme();
 
@@ -18,6 +19,7 @@ export default function Footer() {
         color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#FFFFFF',
         paddingBottom: '20px'
       }}
+      className={props.className}
     >
       <Container>
         <Grid container spacing={5}>
