@@ -13,6 +13,8 @@ import RestartAltIcon from '@mui/icons-material/RestartAlt';
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import {useTheme} from '@mui/material/styles';
+import Footer from '../../components/Footer/Footer.jsx';
+
 
 const HomePage = () => {
     const [data, setData] = useState([]);
@@ -176,6 +178,7 @@ const HomePage = () => {
     };
 
     return (
+        <>
         <div className='home-page-container'>
             <div className='list'>
                 <h1 className='titleHome'>Pencarian: {selectedCity}</h1>
@@ -270,9 +273,11 @@ const HomePage = () => {
                             </CSSTransition>
                         ) : null}
                     </TransitionGroup>
-                </Grid>
+                </Grid> 
             </div>
         </div>
+        <Footer/> 
+        </>
     )
 }
 
