@@ -33,6 +33,7 @@ export default function SelectComponent(props) {
         <InputLabel htmlFor={props.htmlFor}>Pilih Provinsi tujuan mu</InputLabel>
         <Select
           id={props.id}
+          className={props.className}
           value={props.value}
           onChange={props.onChange}
           input={<BootstrapInput />}
