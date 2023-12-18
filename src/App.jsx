@@ -1,7 +1,7 @@
 import {Routes, Route} from 'react-router-dom'
 
 import Welcome from './pages/welcome/Welcome'
-import ListWisata from './pages/listWIsata/ListWisata';
+import ListWisata from './pages/listWisata/ListWisata'
 import HomePage from './pages/homePage/HomePage';
 import AboutUs from './pages/aboutUs/AboutUs';
 import DetailPage from './pages/Detail/DetailPage';
@@ -69,7 +69,9 @@ function App() {
 
     return (
         <ThemeProvider theme={theme}>
-            <CssBaseline/>
+            <CssBaseline
+                style={{ marginRight: '0px', marginLeft: '0px'}}
+            />
             {location.pathname !== '/login' && (
                 <div className='nav'>
                     <Header className='navBar' toogleColorMode={toogleColorMode}/>
@@ -101,4 +103,4 @@ function App() {
     )
 }
 
-export default App
+export default App;
