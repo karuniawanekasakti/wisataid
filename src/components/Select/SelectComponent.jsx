@@ -29,7 +29,7 @@ const BootstrapInput = styled(InputBase)(({ theme }) => ({
 export default function SelectComponent(props) {
   return (
     <div>
-      <FormControl sx={{ width: '500px' }} variant={props.variant} size={props.size}>
+      <FormControl fullWidth={true} variant={props.variant} size={props.size}>
         <InputLabel htmlFor={props.htmlFor}>Pilih Provinsi tujuan mu</InputLabel>
         <Select
           id={props.id}
