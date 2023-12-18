@@ -1,0 +1,38 @@
+/* FormComponent.css */
+.select-field {
+  margin-bottom: 16px;
+}
+
+.form-container {
+  max-width: 450px;
+  margin: auto;
+  padding: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+  margin-bottom: 20px;
+}
+
+.grid-item-textfield {
+  width: 100%;
+  margin: 0;
+}
+
+.upload-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column; /* Align children in a column */
+  align-items: center; /* Center items horizontally */
+}
+
+.image-preview {
+  width: 100%;
+  max-width: 400px; /* Adjust the max-width according to your preference */
+  height: auto; /* Maintain aspect ratio */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 16px; /* Add margin for separation */
+}
