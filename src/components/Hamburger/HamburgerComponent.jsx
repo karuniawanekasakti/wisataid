@@ -11,6 +11,7 @@ import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import navLinks from "../../utils/NavLinks.jsx";
 import Button from "@mui/material/Button";
+import ButtonComponent from "../Button/ButtonComponent.jsx";
 
 // const drawerWidth = 240;
 const DrawerHeader = styled('div')(({ theme }) => ({
@@ -32,6 +33,10 @@ export default function HamburgerComponent(props) {
     const handleDrawerClose = () => {
         setOpen(false);
     };
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        props.onLogout();
+    }
 
     return (
         <Box sx={{ display: 'flex' }}>
@@ -79,6 +84,16 @@ export default function HamburgerComponent(props) {
                             </Button>
                         );
                     })}
+                    <ButtonComponent
+                        variant="default"
+                        text={props.isLoggedIn ? 'Logout' : 'Login' }
+                        size='medium'
+                        style={{
+                            color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#FFFFFF',
+                        }}
+                        onClick={props.isLoggedIn ? handleLogout : null}
+                        to={!props.isLoggedIn ? '/login' : '/'}
+                    />
                 </List>
                 <Divider />
             </Drawer>
