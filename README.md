@@ -1,8 +1,69 @@
-# React + Vite
+<h1 align="center">
+    <img src="https://readme-typing-svg.herokuapp.com/?font=Righteous&size=35&center=true&vCenter=true&width=500&height=70&duration=4000&lines=Welcome+to+Wisata+ID+👋;" />
+</h1>
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Wisata ID
+> Capstone Project SIB Cycle 5 Dicoding Academy X Kampus Merdeka
 
-Currently, two official plugins are available:
+[![NPM Version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Downloads Stats][npm-downloads]][npm-url]
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Wisata ID merupakan sebuah platfrom yang menyediakan informasi seputar pariwisata di Indonesia. Tentunya dengan berbagai fitur yang memudahkan pengguna untuk mencari wisata yang diinginkan. Anda bisa mencari wisata dengan klasifikasi wisata sesuai dengan yang anda minta berdasarkan rating, kategori maupun region lokasi wisata yang hendak dituju.
+
+![](header.png)
+
+ <hr/>
+ 
+<h2 align="center">⚒ Languages-Frameworks-Tools ⚒</h2>
+<br/>
+<div align="center">
+    <img src="https://skillicons.dev/icons?i=react,bootstrap,mui,html,css,vscode,github,figma,git,vite" />
+    <img src="https://skillicons.dev/icons?i=nodejs,javascript,express,mysql,postman,idea,vercel,aws" /><br>
+</div>
+
+<br/>
+<hr/>
+
+## Installation
+
+sh
+git clone https://github.com/karuniawanekasakti/wisataid.git
+
+
+sh
+npm install
+
+
+sh
+npm run build
+
+
+sh
+npm run dev
+
+## Our Teams Project
+
+* _Ridwan Maulana_     ->    (Universitas Alma Ata)
+* _Karuniawan Ekasakti_     ->    (Universitas Gadjah Mada)
+* _Farhan Maulana Pangestu_     ->    (Universitas Alma Ata)
+* _Yahya Khaliman Indrayana_     ->    (Universitas Amikom Surakarta)
+* _Hana Amanda_     ->    (Universitas Teknologi Digital Indonesia)
+
+## Contributing
+
+1. Fork it (<https://github.com/karuniawanekasakti/wisataid/fork>)
+2. Create your feature branch (git checkout -b feature/fooBar)
+3. Commit your changes (git commit -am 'Add some fooBar')
+4. Push to the branch (git push origin feature/fooBar)
+5. Create a new Pull Request
+
+<img src="https://github.com/darsaveli/Mariam/blob/main/1479814528_webarebears.gif" width="385px" align="center">
+
+<!-- Markdown link & img dfn's -->
+[npm-image]: https://img.shields.io/npm/v/datadog-metrics.svg?style=flat-square
+[npm-url]: https://npmjs.org/package/datadog-metrics
+[npm-downloads]: https://img.shields.io/npm/dm/datadog-metrics.svg?style=flat-square
+[travis-image]: https://img.shields.io/travis/dbader/node-datadog-metrics/master.svg?style=flat-square
+[travis-url]: https://travis-ci.org/dbader/node-datadog-metrics
+[wiki]: https://github.com/yourname/yourproject/wiki
