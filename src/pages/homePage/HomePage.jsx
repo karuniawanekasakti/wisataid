@@ -27,7 +27,7 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const IMAGE_URL = `https://wisataid-api.my.id/images/`;
+const IMAGE_URL = `http://47.128.153.249:4000/images/`;
 
 
 export default function HomePage() {
@@ -44,7 +44,7 @@ export default function HomePage() {
   useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('https://wisataid-api.my.id/wisata');
+            const response = await fetch('http://47.128.153.249:4000/wisata');
             if (!response.ok) {
               const errorMessage = await response.text();
               throw new Error(`Server Error: ${errorMessage}`);

@@ -21,7 +21,7 @@ const DrawerHeader = styled('div')(({ theme }) => ({
     justifyContent: 'flex-end',
 }));
 
-export default function HamburgerComponent() {
+export default function HamburgerComponent(props) {
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
 
@@ -64,15 +64,21 @@ export default function HamburgerComponent() {
                 </DrawerHeader>
                 <Divider />
                 <List sx={{flexGrow: 1, display: 'flex', flexDirection:'column',textAlign:'center', marginTop: '20px'}}>
-                    {navLinks.map((link) => (
-                        <Button
-                            key={link.name}
-                            href={link.path}
-                            sx={{color: theme.palette.mode === 'dark' ? 'white' : '#2979ff'}}
-                        >
-                            {link.name}
-                        </Button>
-                    ))}
+                    {navLinks.map((link) => {
+                        if (link.name === 'Add Wisata' && !props.isLoggedIn) {
+                            return null;
+                        }
+
+                        return (
+                            <Button
+                                key={link.name}
+                                href={link.path}
+                                sx={{my: 1, color: 'white', display: 'block'}}
+                            >
+                                {link.name}
+                            </Button>
+                        );
+                    })}
                 </List>
                 <Divider />
             </Drawer>

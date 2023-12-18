@@ -42,8 +42,20 @@
   margin-bottom: 16px;
 }
 
-
 a, h1{
   z-index: 99;
   position: relative;
+}
+/*.nav {*/
+/*  z-index: 2; !* Adjusted z-index *!*/
+/*  position: relative; !* Add this line *!*/
+/*}*/
+@media screen and (max-width: 508px) {
+  .inner .innerBg .selecttt{
+    width: 100% !important;
+    /*margin: auto !important;*/
+    justify-content: center !important;
+    text-align: center !important;
+  }
+
 }
