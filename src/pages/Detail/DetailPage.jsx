@@ -13,8 +13,8 @@ import Footer from '../../components/Footer/Footer.jsx';
 
 export default function DetailPage() {
     const [data, setData] = useState(null);
-    const BASE_URL = 'https://wisataid-api.my.id/wisata';
-    const BASE_IMAGE = 'https://wisataid-api.my.id/images/';
+    const BASE_URL = 'http://47.128.153.249:4000/wisata';
+    const BASE_IMAGE = 'http://47.128.153.249:4000/images/';
 
     const theme = useTheme();
     const {id} = useParams();

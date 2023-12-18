@@ -1,4 +1,4 @@
-import {Routes, Route} from 'react-router-dom'
+import {Routes, Route,useLocation} from 'react-router-dom'
 
 import Welcome from './pages/welcome/Welcome'
 import ListWisata from './pages/listWisata/ListWisata'
@@ -19,6 +19,35 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 function App() {
     const [mode, setMode] = React.useState(localStorage.getItem('mode') || 'dark');
     const [loading, setLoading] = useState(false);
+    const [isLoggedIn, setIsLoggedIn] = useState(!!localStorage.getItem('token'));
+    const location = useLocation();
+    const [ key, setKey ] = useState(Math.random());
+
+    const handleLogout = () => {
+        setLoading(true)
+        localStorage.removeItem('token');
+        setIsLoggedIn(false);
+        setKey(Math.random());
+        setTimeout(() => {
+            setLoading(false)
+        }, 2000);
+    }
+    const handleLogin = () => {
+        // localStorage.getItem('token', token);
+        setIsLoggedIn(true);
+        setKey(Math.random());
+    }
+    useEffect(() => {
+        const handleStorageChange = () => {
+            setIsLoggedIn(!!localStorage.getItem('token'));
+        };
+
+        window.addEventListener('storage', handleStorageChange);
+
+        return () => {
+            window.removeEventListener('storage', handleStorageChange);
+        };
+    }, []);
 
     useEffect(() => {
         setLoading(true);
@@ -74,7 +103,7 @@ function App() {
             />
             {location.pathname !== '/login' && (
                 <div className='nav'>
-                    <Header className='navBar' toogleColorMode={toogleColorMode}/>
+                    <Header key={key} className='navBar' toogleColorMode={toogleColorMode} isLoggedIn={isLoggedIn} onLogout={handleLogout}/>
                 </div>
             )}
             {
@@ -91,11 +120,10 @@ function App() {
                         <Route path="/list-wisata/:city" Component={ListWisata}/>
                         <Route path="/home" Component={HomePage}/>
                         <Route path="/detail/:id" Component={DetailPage}/>
-                        <Route path="/login" Component={Login}/>
+                        <Route path="/login" element={<Login onLogin={handleLogin} />}/>
                         <Route path="/contribution" Component={Contribution}/>
                         <Route path="/AboutUs" Component={AboutUs}/>
                         <Route path="/add-wisata" Component={Addwisata}/>
-
                     </Routes>
                 )
             }
