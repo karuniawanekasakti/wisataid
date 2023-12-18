@@ -1,6 +1,7 @@
   /* eslint-disable no-unused-vars */
   // eslint-disable-next-line no-unused-vars
   import { useState } from "react";
+  import Stack from '@mui/material/Stack';
   import FormComponent from '../../components/Form/FormComponent';
   import Typography from "@mui/material/Typography";
   import Container from '@mui/material/Container';
@@ -9,7 +10,6 @@
   // import './Contribution.css'
 
   const Contribution = () => {
-
 
       return (
         <Container
