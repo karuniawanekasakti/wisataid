@@ -24,14 +24,14 @@
         // style={{backgroundColor: theme.palette.background.default}}
         >
           <Grid Container spacing={2}>
-            <Grid item textAlign={'center'} marginBottom={'40px'}>
+            <Grid item xs={12} sm={6} textAlign={'center'} marginBottom={'40px'}>
               <h1>Contribution</h1>
               <Typography variant="body1">
                 Kirimkan informasi destinasi wisata baru kepada kami agar orang lain bisa mengetahuinya.
               </Typography>
             </Grid>
             <Grid item marginBottom={'100px'}>
-              <FormComponent/>
+              <FormComponent style={{width:'100%'}}/>
             </Grid>
             <Grid className='footer' marginTop={'30px'} marginRight={'0'} marginLeft={'0'}>
               <Footer/>       

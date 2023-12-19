@@ -201,7 +201,7 @@ const FormComponent = () => {
   return (
     <div className="form-container">
       <form ref={form} noValidate onSubmit={submitForm}>
-        <Stack spacing={2} width={400} sx={{minWidth: 0}}>
+        <Stack spacing={2} width={400} sx={{minWidth: 0}} style={{width:'100%'}}>
           <TextField onChange={handleFormChange} value={data.nama_wisata} label='Nama Wisata' type='text' name='nama_wisata'error={!!formErrors.nama_wisata} helperText={formErrors.nama_wisata} required/>
           <Stack direction='row' spacing={2}>
             <TextField onChange={handleFormChange} value={data.kota} label='Kota' type="text" className="grid-item-textfield" name='kota' error={!!formErrors.kota} helperText={formErrors.kota} required/>
