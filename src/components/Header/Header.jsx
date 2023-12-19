@@ -91,17 +91,6 @@ const Header = (props) => {
                             </div>
                         </Link>
                     </Box>
-                    {/*<Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>*/}
-                    {/*    {navLinks.map((link) => (*/}
-                    {/*        <Button*/}
-                    {/*            key={link.name}*/}
-                    {/*            href={link.path}*/}
-                    {/*            sx={{my: 1, color: 'white', display: 'block'}}*/}
-                    {/*        >*/}
-                    {/*            {link.name}*/}
-                    {/*        </Button>*/}
-                    {/*    ))}*/}
-                    {/*</Box>*/}
                     <Box sx={{flexGrow: 1, display: {xs: 'none', md: 'flex'}}}>
                         {navLinks.map((link) => {
                             if (link.name === 'Add Wisata' && !props.isLoggedIn) {

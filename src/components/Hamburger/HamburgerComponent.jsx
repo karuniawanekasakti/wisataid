@@ -46,6 +46,7 @@ export default function HamburgerComponent(props) {
                 aria-label="open drawer"
                 onClick={handleDrawerOpen}
                 edge="start"
+                size='large'
             >
                 <MenuIcon />
             </IconButton>
@@ -79,6 +80,7 @@ export default function HamburgerComponent(props) {
                                 key={link.name}
                                 href={link.path}
                                 sx={{my: 1, color: 'white', display: 'block'}}
+                                style={{color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5',fontWeight:'bold'}}
                             >
                                 {link.name}
                             </Button>
@@ -89,7 +91,7 @@ export default function HamburgerComponent(props) {
                         text={props.isLoggedIn ? 'Logout' : 'Login' }
                         size='medium'
                         style={{
-                            color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#FFFFFF',
+                            color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5',
                         }}
                         onClick={props.isLoggedIn ? handleLogout : null}
                         to={!props.isLoggedIn ? '/login' : '/'}
