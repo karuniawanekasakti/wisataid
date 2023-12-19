@@ -10,6 +10,7 @@ import Grid from '@mui/material/Grid';
 import { API_LINK } from '../../utils/api';
 
 const BASE_URL = `${API_LINK}/wisata?search=`;
+
 const fetchData = debounce(async (input, callback) => {
     const response = await fetch(`${BASE_URL}${input}`);
     const data = await response.json();
@@ -17,7 +18,7 @@ const fetchData = debounce(async (input, callback) => {
 }, 400);
 
 export default function SearchComponent(props) {
-    const BASE_IMAGE = 'http://47.128.153.249:4000/images/';
+    const BASE_IMAGE = `${API_LINK}/images/`;
     const theme = useTheme();
     const navigate = useNavigate();
     const [value, setValue] = React.useState(null);
