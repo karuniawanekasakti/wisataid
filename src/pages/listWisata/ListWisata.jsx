@@ -15,13 +15,15 @@ import ClimbingBoxLoader from "react-spinners/ClimbingBoxLoader";
 import {useTheme} from '@mui/material/styles';
 import Footer from '../../components/Footer/Footer.jsx';
 
+import { API_LINK } from '../../utils/api.jsx';
+
 
 const HomePage = () => {
     const [data, setData] = useState([]);
     const [filteredData, setFilteredData] = useState([]);
     const [anchorEl, setAnchorEl] = useState({rating: null, kategori: null, kota: null});
-    const BASE_URL = 'http://47.128.153.249:4000/wisata';
-    const IMAGE_URL = `http://47.128.153.249:4000/images/`;
+    const BASE_URL = `${API_LINK}/wisata`;
+    const IMAGE_URL = `${API_LINK}/images/`;
     const ratingOptions = [1, 2, 3, 4, 5];
     const kategoriOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kategori))] : [];
     const kotaOptions = Array.isArray(data) ? [...new Set(data.map(data => data.kota))] : [];
@@ -66,7 +68,7 @@ const HomePage = () => {
             }
         };
         getDataWista();
-    }, [selectedCity]);
+    }, [selectedCity, BASE_URL]);
 
     const getOptions = (filterName) => {
         switch (filterName) {

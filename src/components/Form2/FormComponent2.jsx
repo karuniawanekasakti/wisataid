@@ -8,17 +8,17 @@ import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import { useState } from "react";
 import { useRef } from 'react';
 import axios from "axios";
-import { redirect } from "react-router-dom";
-
+import {useNavigate} from "react-router-dom";
 
 
 import AllertMessage from "../../components/AlertMessage/AllertMessage.jsx";
-
+import { API_LINK } from "../../utils/api.jsx";
 
 import './FormComponent2.css'
 
-
 const FormComponent = () => {
+
+  const navigate = useNavigate();
 
   const [fotoPreview, setFotoPreview] = useState(null);
   const [logoPreview, setLogoPreview] = useState(null);
@@ -50,7 +50,7 @@ const FormComponent = () => {
     logo_daerah: '',
   });
 
-  const BASE_URL = "https://wisataid-api.my.id/wisata";
+  const BASE_URL = `${API_LINK}/wisata`;
 
   const handleFotoChange = (e) => {
     const file = e.target.files[0];
@@ -128,8 +128,6 @@ const FormComponent = () => {
       return;
     }
 
-    
-  
     const formData = new FormData();
     formData.append('nama_wisata', data.nama_wisata);
     formData.append('kota', data.kota);
@@ -158,8 +156,8 @@ const FormComponent = () => {
   
       form.current.reset();
       setTimeout(() => {
-        redirect("/")
-      }, 4000); // 4 seconds delay
+        navigate('/');
+    }, 2000);
     } catch (error) {
       console.error(error);
     }
