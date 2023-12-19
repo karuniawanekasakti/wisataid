@@ -7,8 +7,11 @@ import { useNavigate } from 'react-router-dom';
 import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 
+import { API_LINK } from '../../utils/api';
+
+const BASE_URL = `${API_LINK}/wisata?search=`;
 const fetchData = debounce(async (input, callback) => {
-    const response = await fetch(`http://47.128.153.249:4000/wisata?search=${input}`);
+    const response = await fetch(`${BASE_URL}${input}`);
     const data = await response.json();
     callback(data.data);
 }, 400);
