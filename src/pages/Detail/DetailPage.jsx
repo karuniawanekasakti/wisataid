@@ -10,11 +10,13 @@ import {useEffect, useState} from "react";
 import {useTheme} from "@mui/material/styles";
 import Footer from '../../components/Footer/Footer.jsx';
 
+import { API_LINK } from '../../utils/api.jsx';
+
 
 export default function DetailPage() {
     const [data, setData] = useState(null);
-    const BASE_URL = 'http://47.128.153.249:4000/wisata';
-    const BASE_IMAGE = 'http://47.128.153.249:4000/images/';
+    const BASE_URL = `${API_LINK}/wisata`;
+    const BASE_IMAGE = `${API_LINK}/images/`;
 
     const theme = useTheme();
     const {id} = useParams();
@@ -33,7 +35,7 @@ export default function DetailPage() {
             }
         };
         getDataWista();
-    }, [id]);
+    }, [id, BASE_URL]);
 
     if (!data) {
         return <div>Not Found</div>;
