@@ -129,9 +129,9 @@ const FormComponent = () => {
 }
 
   return (
-    <div className="form-container">
+    <div className="form-container" style={{width:'100%'}}>
       <form ref={form} noValidate onSubmit={sendEmail}>
-        <Stack spacing={2} width={400} sx={{minWidth: 0}}>
+        <Stack spacing={2} width={400} sx={{minWidth: 0}} style={{width:'100%'}}>
           <TextField label='Nama Pengirim' type='text' name='sender_name' error={!!formErrors.sender_name} helperText={formErrors.sender_name} required/>
           <TextField label='Email' type='email' name='sender_email'error={!!formErrors.sender_email} helperText={formErrors.sender_email} required/>
           <TextField label='Nama Wisata' type='text' name='nama_wisata'error={!!formErrors.nama_wisata} helperText={formErrors.nama_wisata} required/>
