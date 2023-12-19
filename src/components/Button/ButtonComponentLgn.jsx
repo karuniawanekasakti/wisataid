@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
 

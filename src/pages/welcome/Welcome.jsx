@@ -4,17 +4,18 @@ import ButtonComponent from '../../components/Button/ButtonComponent';
 import Stack from '@mui/material/Stack';
 import KeyboardArrowRightRoundedIcon from '@mui/icons-material/KeyboardArrowRightRounded';
 import Paper from '@mui/material/Paper';
-import { useMediaQuery } from "@mui/material";
 import HeroImage from '../../assets/img/background 1.png'
 import './Welcome.css'
 import { useEffect } from 'react';
 
+import { API_LINK } from '../../utils/api';
+
 
 const Welcome = () => {
-  const BASE_URL = 'http://47.128.153.249:4000/wisata';
+  const BASE_URL = `${API_LINK}/wisata`;
   const [selectedCity, setSelectedCity] = React.useState('');
   const [city, setCity] = React.useState([]);
-  const isMobile = useMediaQuery("(max-width: 600px)");
+
   useEffect(()=> {
     const getWisataCity = async () => {
       try {
@@ -35,7 +36,7 @@ const Welcome = () => {
       }
     };
     getWisataCity();
-  }, []);
+  }, [BASE_URL]);
 
   return (
     <>

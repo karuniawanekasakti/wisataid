@@ -16,6 +16,7 @@ import ButtonGroup from '../../components/Button/ButtonGroup.jsx';
 import { useTheme } from '@mui/material/styles';
 import Footer from '../../components/Footer/Footer.jsx';
 // import {useTheme} from '@mui/material/styles';
+import { API_LINK } from '../../utils/api.jsx';
 
 
 import './HomePage.css';
@@ -27,8 +28,8 @@ const DemoPaper = styled(Paper)(({ theme }) => ({
   textAlign: 'center',
 }));
 
-const IMAGE_URL = `http://47.128.153.249:4000/images/`;
-
+const IMAGE_URL = `${API_LINK}/images/`;
+const BASE_URL = `${API_LINK}/wisata`;
 
 export default function HomePage() {
   const mainSectionRef = useRef(null);
@@ -44,7 +45,7 @@ export default function HomePage() {
   useEffect(() => {
         const fetchData = async () => {
           try {
-            const response = await fetch('http://47.128.153.249:4000/wisata');
+            const response = await fetch(BASE_URL);
             if (!response.ok) {
               const errorMessage = await response.text();
               throw new Error(`Server Error: ${errorMessage}`);

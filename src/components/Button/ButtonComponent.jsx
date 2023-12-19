@@ -13,6 +13,7 @@ export default function ButtonComponent(props) {
                 onClick={props.onClick}
                 style={{...props.style}}
                 className={props.className}
+                disabled={props.disabled}
             >
                 <b>
                     {props.text}

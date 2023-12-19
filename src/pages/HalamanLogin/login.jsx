@@ -1,6 +1,7 @@
 // eslint-disable-next-line no-unused-vars
 import * as React from "react";
 import {Avatar, Container, Box} from "@mui/material";
+import Grid from '@mui/material/Grid';
 import CloudDoneIcon from '@mui/icons-material/CloudDone';
 import TextInput from "../../components/TextInput/TextInput.jsx";
 import Typography from "@mui/material/Typography";
@@ -11,6 +12,8 @@ import AllertMessage from "../../components/AlertMessage/AllertMessage.jsx";
 import {useNavigate} from "react-router-dom";
 import ButtonComponent from "../../components/Button/ButtonComponent.jsx";
 import {useTheme} from "@mui/material/styles";
+
+import { API_LINK } from "../../utils/api.jsx";
 
 export default function Login(props) {
     const [isShowPassword, setIsShowPassword] = useState(false);
@@ -26,12 +29,13 @@ export default function Login(props) {
     }
     const handleSubmit = (event) => {
         event.preventDefault();
+        const BASE_URL = `${API_LINK}/login`;
         const data = new FormData(event.currentTarget);
 
         const email = data.get('email');
         const password = data.get('password');
 
-        fetch('http://47.128.153.249:4000/login', {
+        fetch(BASE_URL, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -68,19 +72,7 @@ export default function Login(props) {
         setErrorMessage();
     }
     return (
-        // <ThemeProvider theme={theme}>
         <>
-            <ButtonComponent
-                variant="outlined"
-                text='Kembali'
-                size='medium'
-                style={{
-                    left: '25px',
-                    top:'50px',
-                    color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5' // Ubah warna teks berdasarkan mode
-                }}
-                onClick={handleBack}
-            />
         <Container maxWidth="xs">
             <Box sx={{
                 marginTop: 25,
@@ -145,21 +137,38 @@ export default function Login(props) {
                     >
                         {isShowPassword ? (
                             <VisibilityOff fontSize="medium"
-                                           style={{position: 'absolute', right: '15', top: '33', cursor: 'pointer'}}/>
+                                style={{position: 'absolute', right: '15', top: '33', cursor: 'pointer'}}/>
                         ) : (
                             <Visibility fontSize="medium"
-                                        style={{position: 'absolute', right: '15', top: '33', cursor: 'pointer'}}/>
+                                style={{position: 'absolute', right: '15', top: '33', cursor: 'pointer'}}/>
                         )}
                     </div>
                 </div>
-                <ButtonComponentLgn
-                    type="submit"
-                    fullWidth
-                    text="Sign In"
-                    variant="contained"
-                    sx={{mt: 3, mb: 2}}
-                    style={{top:'10px'}}
-                />
+                <Grid container>
+                    <Grid item xs={3}>
+                    <ButtonComponent
+                        variant="outlined"
+                        text= "Back"
+                        fullWidth
+                        sx={{mt: 3, mb: 2}}
+                        style={{
+                            color: theme.palette.mode === 'dark' ? '#FFFFFF' : '#3F51B5',
+                            top:'10px'
+                        }}
+                        onClick={handleBack}
+                    />
+                    </Grid>
+                    <Grid item xs={9}>
+                        <ButtonComponentLgn
+                            type="submit"
+                            fullWidth
+                            text="Sign In"
+                            variant="contained"
+                            sx={{mt: 3, mb: 2}}
+                            style={{top:'10px'}}
+                        />
+                    </Grid>
+                </Grid>
                 <AllertMessage
                     label="Berhasil Login"
                     open={isSuccess}
